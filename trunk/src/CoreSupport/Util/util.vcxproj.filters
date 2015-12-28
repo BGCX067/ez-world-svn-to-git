@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Container">
+      <UniqueIdentifier>{fe3567b8-010f-499c-a95b-d82803d6eb20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Timer">
+      <UniqueIdentifier>{1c3b9542-6c6e-4486-a289-85669c41e1b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thread">
+      <UniqueIdentifier>{544c9d31-d048-40c8-82c3-d21cb5061f37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{bdae741e-6c4d-4125-94b2-306941860249}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Smtp">
+      <UniqueIdentifier>{c9d97a2f-c04b-4ca9-be10-81f82106e3e1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="blockallocator.cpp">
+      <Filter>Container</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="Thread.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="Singleton.CPP">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="strcode.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="vwutil.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="CmdLineParser.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="FpsHolder.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Smtp\Base64.cpp">
+      <Filter>Smtp</Filter>
+    </ClCompile>
+    <ClCompile Include="Smtp\CSmtp.cpp">
+      <Filter>Smtp</Filter>
+    </ClCompile>
+    <ClCompile Include="BugReport.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="blockallocator.h">
+      <Filter>Container</Filter>
+    </ClInclude>
+    <ClInclude Include="SafeContainer.h">
+      <Filter>Container</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadSafeObject.h">
+      <Filter>Container</Filter>
+    </ClInclude>
+    <ClInclude Include="unitallocator.h">
+      <Filter>Container</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="CSLock.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="EnumToString.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton.H">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="strcode.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="tstring.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="vwutil.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="CmdLineParser.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="FpsHolder.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Smtp\CSmtp.h">
+      <Filter>Smtp</Filter>
+    </ClInclude>
+    <ClInclude Include="Smtp\Base64.h">
+      <Filter>Smtp</Filter>
+    </ClInclude>
+    <ClInclude Include="BugReport.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

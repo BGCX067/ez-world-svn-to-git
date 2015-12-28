@@ -1,0 +1,661 @@
+﻿<?xml version="1.0" encoding="utf-8"?>		
+
+
+
+<BUSES version="1.1">
+
+<!--新殇丘寻路配置文件 -->		
+<!--	<BUS beg="3" end="7">
+	    <CITY name="新殇丘" id="3"  out_x="4748" out_y="1773" ></CITY>
+		<CITY name="轩辕城" id="10"     out_x="239" out_y="519" ></CITY>
+		<CITY name="殇丘" id="7"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	-->
+	<BUS beg="3" end="4">	
+		<CITY name="殇丘" id="3"  out_x="4748" out_y="1773" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="239" out_y="519" ></CITY>
+		<CITY name="夕原" id="4"   out_x="" out_y="" ></CITY>
+	</BUS>
+	<BUS beg="3" end="8">
+	    <CITY name="殇丘" id="3"  out_x="4748" out_y="1773" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="1189" out_y="3250" ></CITY>
+		<CITY name="嵎阙泽" id="8"  out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="3" end="9">
+	    <CITY name="殇丘" id="3"  out_x="4748" out_y="1773" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="2057" out_y="202" ></CITY>
+		<CITY name="桃源乡" id="9"  out_x="" out_y="" ></CITY>
+	</BUS>
+	<BUS beg="3" end="10">
+	    <CITY name="殇丘" id="3"  out_x="4748" out_y="1773" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="" out_y="" ></CITY>
+	</BUS>
+	<BUS beg="3" end="11">
+	    <CITY name="殇丘" id="3"  out_x="4748" out_y="1773" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="3506" out_y="2102" ></CITY>
+		<CITY name="黎山" id="12"   out_x="2522" out_y="3000" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="3" end="12">
+	    <CITY name="殇丘" id="3"  out_x="4748" out_y="1773" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="3506" out_y="2102" ></CITY>
+		<CITY name="黎山" id="12"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="3" end="13">
+	    <CITY name="殇丘" id="3"  out_x="4748" out_y="1773" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="3506" out_y="2102" ></CITY>
+		<CITY name="黎山" id="12"   out_x="2522" out_y="3000" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="3841" out_y="434" ></CITY>
+		<CITY name="酆岭" id="13"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="3" end="14">
+	    <CITY name="殇丘" id="3"  out_x="4748" out_y="1773" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="3506" out_y="2102" ></CITY>
+		<CITY name="黎山" id="12"   out_x="2522" out_y="3000" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="2898" out_y="2910" ></CITY>
+		<CITY name="龙须潭" id="14"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="3" end="15">
+	    <CITY name="殇丘" id="3"  out_x="4748" out_y="1773" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="3506" out_y="2102" ></CITY>
+		<CITY name="黎山" id="12"   out_x="2522" out_y="3000" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="3841" out_y="434" ></CITY>
+		<CITY name="酆岭" id="13"   out_x="1389" out_y="176" ></CITY>
+		<CITY name="荒沙岛" id="15"   out_x="" out_y="" ></CITY>
+	</BUS>	
+
+<!--夕原寻路配置文件 -->		
+<!--	<BUS beg="4" end="7">
+	    <CITY name="夕原" id="4"  out_x="158" out_y="2058" ></CITY>
+		<CITY name="轩辕城" id="10"     out_x="239" out_y="519" ></CITY>
+		<CITY name="殇丘" id="7"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	-->
+	<BUS beg="4" end="3">
+	    <CITY name="夕原" id="4"  out_x="158" out_y="2058" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="335" out_y="3081" ></CITY>
+		<CITY name="殇丘" id="3"  out_x="" out_y="" ></CITY>
+	</BUS>
+	<BUS beg="4" end="8">
+	    <CITY name="夕原" id="4"  out_x="158" out_y="2058" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="1189" out_y="3250" ></CITY>
+		<CITY name="嵎阙泽" id="8"  out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="4" end="9">
+	    <CITY name="夕原" id="4"  out_x="158" out_y="2058" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="2057" out_y="202" ></CITY>
+		<CITY name="桃源乡" id="9"  out_x="" out_y="" ></CITY>
+	</BUS>
+	<BUS beg="4" end="10">
+	    <CITY name="夕原" id="4"  out_x="158" out_y="2058" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="" out_y="" ></CITY>
+	</BUS>
+	<BUS beg="4" end="11">
+	    <CITY name="夕原" id="4"  out_x="158" out_y="2058" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="3506" out_y="2102" ></CITY>
+		<CITY name="黎山" id="12"   out_x="2522" out_y="3000" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="4" end="12">
+	    <CITY name="夕原" id="4"  out_x="158" out_y="2058" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="3506" out_y="2102" ></CITY>
+		<CITY name="黎山" id="12"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="4" end="13">
+	    <CITY name="夕原" id="4"  out_x="158" out_y="2058" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="3506" out_y="2102" ></CITY>
+		<CITY name="黎山" id="12"   out_x="2522" out_y="3000" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="3841" out_y="434" ></CITY>
+		<CITY name="酆岭" id="13"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="4" end="14">
+	    <CITY name="夕原" id="4"  out_x="158" out_y="2058" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="3506" out_y="2102" ></CITY>
+		<CITY name="黎山" id="12"   out_x="2522" out_y="3000" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="2898" out_y="2910" ></CITY>
+		<CITY name="龙须潭" id="14"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="4" end="15">
+	    <CITY name="夕原" id="4"  out_x="158" out_y="2058" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="3506" out_y="2102" ></CITY>
+		<CITY name="黎山" id="12"   out_x="2522" out_y="3000" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="3841" out_y="434" ></CITY>
+		<CITY name="酆岭" id="13"   out_x="1389" out_y="176" ></CITY>
+		<CITY name="荒沙岛" id="15"   out_x="" out_y="" ></CITY>
+	</BUS>	
+
+
+   <!--殇丘寻路配置文件 -->		
+	<BUS beg="7" end="8">	
+		<CITY name="旧殇丘" id="7"  out_x="2914" out_y="3447" ></CITY>
+		<CITY name="嵎阙泽" id="8"  out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="7" end="9">	
+		<CITY name="旧殇丘" id="7"  out_x="4748" out_y="1774" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="2057" out_y="202" ></CITY>
+		<CITY name="桃源乡" id="9"  out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="7" end="10">	
+		<CITY name="旧殇丘" id="7"  out_x="4748" out_y="1774" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="7" end="11">	
+		<CITY name="旧殇丘" id="7"  out_x="4748" out_y="1774" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="3506" out_y="2102" ></CITY>
+		<CITY name="黎山" id="12"   out_x="2522" out_y="3000" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="7" end="12">	
+		<CITY name="旧殇丘" id="7"  out_x="4748" out_y="1774" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="3506" out_y="2102" ></CITY>
+		<CITY name="黎山" id="12"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="7" end="13">	
+		<CITY name="旧殇丘" id="7"  out_x="4748" out_y="1774" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="3506" out_y="2102" ></CITY>
+		<CITY name="黎山" id="12"   out_x="2522" out_y="3000" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="3841" out_y="434" ></CITY>
+		<CITY name="酆岭" id="13"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="7" end="14">	
+		<CITY name="旧殇丘" id="7"  out_x="4748" out_y="1774" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="3506" out_y="2102" ></CITY>
+		<CITY name="黎山" id="12"   out_x="2522" out_y="3000" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="2898" out_y="2910" ></CITY>
+		<CITY name="龙须潭" id="14"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="7" end="15">	
+		<CITY name="旧殇丘" id="7"  out_x="4748" out_y="1774" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="3506" out_y="2102" ></CITY>
+		<CITY name="黎山" id="12"   out_x="2522" out_y="3000" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="3841" out_y="434" ></CITY>
+		<CITY name="酆岭" id="13"   out_x="1389" out_y="176" ></CITY>
+		<CITY name="荒沙岛" id="15"   out_x="" out_y="" ></CITY>
+	</BUS>
+	<BUS beg="7" end="4">	
+		<CITY name="旧殇丘" id="7"  out_x="4748" out_y="1774" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="239" out_y="519" ></CITY>
+		<CITY name="夕原" id="4"   out_x="" out_y="" ></CITY>
+	</BUS>
+		
+		
+<!--嵎阙泽寻路配置文件 -->
+<!--	<BUS beg="8" end="7">	
+		<CITY name="嵎阙泽" id="8"    out_x="96" out_y="1093" ></CITY>
+		<CITY name="殇丘" id="7"   out_x="" out_y="" ></CITY>
+		
+	</BUS>
+	-->
+	<BUS beg="8" end="3">
+	    <CITY name="嵎阙泽" id="8"    out_x="4037" out_y="715" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="335" out_y="3081" ></CITY>
+		<CITY name="殇丘" id="3"  out_x="" out_y="" ></CITY>
+	</BUS>
+	<BUS beg="8" end="4">	
+		<CITY name="嵎阙泽" id="8"    out_x="4037" out_y="715" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="239" out_y="519" ></CITY>
+		<CITY name="夕原" id="4"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="8" end="9">	
+		<CITY name="嵎阙泽" id="8"    out_x="4037" out_y="715" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="2057" out_y="202" ></CITY>
+		<CITY name="桃源乡" id="9"  out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="8" end="10">	
+		<CITY name="嵎阙泽" id="8"    out_x="4037" out_y="715" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="8" end="11">	
+		<CITY name="嵎阙泽" id="8"    out_x="1870" out_y="2966" ></CITY>
+		<CITY name="黎山" id="12"   out_x="2522" out_y="3000" ></CITY>
+		
+	</BUS>	
+	<BUS beg="8" end="12">	
+		<CITY name="嵎阙泽" id="8"    out_x="1870" out_y="2966" ></CITY>
+		<CITY name="黎山" id="12"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="8" end="13">	
+		<CITY name="嵎阙泽" id="8"    out_x="1870" out_y="2966" ></CITY>
+		<CITY name="黎山" id="12"   out_x="2522" out_y="3000" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="3841" out_y="434" ></CITY>
+		<CITY name="酆岭" id="13"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="8" end="14">	
+		<CITY name="嵎阙泽" id="8"    out_x="1870" out_y="2966" ></CITY>
+		<CITY name="黎山" id="12"   out_x="2522" out_y="3000" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="2898" out_y="2910" ></CITY>
+		<CITY name="龙须潭" id="14"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="8" end="15">	
+		<CITY name="嵎阙泽" id="8"    out_x="1870" out_y="2966" ></CITY>
+		<CITY name="黎山" id="12"   out_x="2522" out_y="3000" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="3841" out_y="434" ></CITY>
+		<CITY name="酆岭" id="13"   out_x="1389" out_y="176" ></CITY>
+		<CITY name="荒沙岛" id="15"   out_x="" out_y="" ></CITY>
+	</BUS>
+		
+		
+		
+		
+<!--桃源乡寻路配置文件 -->		
+<!--	<BUS beg="9" end="7">	
+		<CITY name="桃源乡" id="9"    out_x="279" out_y="950" ></CITY>
+		<CITY name="轩辕城" id="10"     out_x="239" out_y="519" ></CITY>
+		<CITY name="殇丘" id="7"   out_x="" out_y="" ></CITY>
+	</BUS>
+	-->
+	<BUS beg="9" end="3">
+	    <CITY name="桃源乡" id="9"    out_x="279" out_y="950" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="335" out_y="3081" ></CITY>
+		<CITY name="殇丘" id="3"  out_x="" out_y="" ></CITY>
+	</BUS>
+	<BUS beg="9" end="4">	
+		<CITY name="桃源乡" id="9"    out_x="279" out_y="950" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="239" out_y="519" ></CITY>
+		<CITY name="夕原" id="4"   out_x="" out_y="" ></CITY>
+	</BUS>
+	<BUS beg="9" end="8">	
+		<CITY name="桃源乡" id="9"    out_x="279" out_y="950" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="1189" out_y="3250" ></CITY>
+		<CITY name="嵎阙泽" id="8"  out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="9" end="10">	
+		<CITY name="桃源乡" id="9"    out_x="279" out_y="950" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="9" end="11">	
+		<CITY name="桃源乡" id="9"    out_x="279" out_y="950" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="3506" out_y="2102" ></CITY>
+		<CITY name="黎山" id="12"   out_x="2522" out_y="3000" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="9" end="12">	
+		<CITY name="桃源乡" id="9"    out_x="3613" out_y="2400" ></CITY>
+		<CITY name="黎山" id="12"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="9" end="13">	
+		<CITY name="桃源乡" id="9"    out_x="3613" out_y="2400" ></CITY>
+		<CITY name="黎山" id="12"   out_x="2522" out_y="3000" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="3841" out_y="434" ></CITY>
+		<CITY name="酆岭" id="13"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="9" end="14">	
+		<CITY name="桃源乡" id="9"    out_x="3613" out_y="2400" ></CITY>
+		<CITY name="黎山" id="12"   out_x="2522" out_y="3000" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="2898" out_y="2910" ></CITY>
+		<CITY name="龙须潭" id="14"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="9" end="15">	
+		<CITY name="桃源乡" id="9"    out_x="3613" out_y="2400" ></CITY>
+		<CITY name="黎山" id="12"   out_x="2522" out_y="3000" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="3841" out_y="434" ></CITY>
+		<CITY name="酆岭" id="13"   out_x="1389" out_y="176" ></CITY>
+		<CITY name="荒沙岛" id="15"   out_x="" out_y="" ></CITY>
+	</BUS>
+		
+		
+		
+		
+		
+		
+<!--轩辕城寻路配置文件 -->		
+<!--	<BUS beg="10" end="7">	
+		<CITY name="轩辕城" id="10"     out_x="239" out_y="519" ></CITY>
+		<CITY name="殇丘" id="7"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	-->
+	<BUS beg="10" end="3">
+		<CITY name="轩辕城" id="10"   out_x="335" out_y="3081" ></CITY>
+		<CITY name="殇丘" id="3"  out_x="" out_y="" ></CITY>
+	</BUS>
+	<BUS beg="10" end="4">	
+		<CITY name="轩辕城" id="10"   out_x="239" out_y="519" ></CITY>
+		<CITY name="夕原" id="4"   out_x="" out_y="" ></CITY>
+	</BUS>
+	<BUS beg="10" end="8">	
+		<CITY name="轩辕城" id="10"   out_x="1189" out_y="3250" ></CITY>
+		<CITY name="嵎阙泽" id="8"  out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="10" end="9">	
+		<CITY name="轩辕城" id="10"   out_x="2057" out_y="202" ></CITY>
+		<CITY name="桃源乡" id="9"  out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="10" end="11">	
+		<CITY name="轩辕城" id="10"   out_x="3506" out_y="2102" ></CITY>
+		<CITY name="黎山" id="12"   out_x="2522" out_y="3000" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="10" end="12">	
+		<CITY name="轩辕城" id="10"   out_x="3506" out_y="2102" ></CITY>
+		<CITY name="黎山" id="12"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="10" end="13">	
+		<CITY name="轩辕城" id="10"   out_x="3506" out_y="2102" ></CITY>
+		<CITY name="黎山" id="12"   out_x="2522" out_y="3000" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="3841" out_y="434" ></CITY>
+		<CITY name="酆岭" id="13"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="10" end="14">	
+		<CITY name="轩辕城" id="10"   out_x="3506" out_y="2102" ></CITY>
+		<CITY name="黎山" id="12"   out_x="2522" out_y="3000" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="2898" out_y="2910" ></CITY>
+		<CITY name="龙须潭" id="14"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="10" end="15">	
+		<CITY name="轩辕城" id="10"   out_x="3506" out_y="2102" ></CITY>
+		<CITY name="黎山" id="12"   out_x="2522" out_y="3000" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="3841" out_y="434" ></CITY>
+		<CITY name="酆岭" id="13"   out_x="1389" out_y="176" ></CITY>
+		<CITY name="荒沙岛" id="15"   out_x="" out_y="" ></CITY>
+	</BUS>
+		
+		
+		
+		
+		
+		
+<!--昆江岭寻路配置文件 -->		
+<!--	<BUS beg="11" end="7">	
+		<CITY name="昆江岭" id="11"   out_x="217" out_y="1407" ></CITY>
+		<CITY name="黎山" id="12"    out_x="434" out_y="2782" ></CITY>
+		<CITY name="轩辕城" id="10"     out_x="239" out_y="519" ></CITY>
+		<CITY name="殇丘" id="7"   out_x="" out_y="" ></CITY>
+	</BUS>
+	-->
+	<BUS beg="11" end="3">
+	    <CITY name="昆江岭" id="11"   out_x="217" out_y="1407" ></CITY>
+		<CITY name="黎山" id="12"    out_x="434" out_y="2782" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="335" out_y="3081" ></CITY>
+		<CITY name="殇丘" id="3"  out_x="" out_y="" ></CITY>
+	</BUS>
+	<BUS beg="11" end="4">	
+		<CITY name="昆江岭" id="11"   out_x="217" out_y="1407" ></CITY>
+		<CITY name="黎山" id="12"    out_x="434" out_y="2782" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="239" out_y="519" ></CITY>
+		<CITY name="夕原" id="4"   out_x="" out_y="" ></CITY>
+	</BUS>
+	<BUS beg="11" end="8">	
+		<CITY name="昆江岭" id="11"   out_x="217" out_y="1407" ></CITY>
+		<CITY name="黎山" id="12"   out_x="3938" out_y="902" ></CITY>
+		<CITY name="嵎阙泽" id="8"  out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="11" end="9">	
+		<CITY name="昆江岭" id="11"   out_x="217" out_y="1407" ></CITY>
+		<CITY name="黎山" id="12"    out_x="434" out_y="2782" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="2057" out_y="202" ></CITY>
+		<CITY name="桃源乡" id="9"  out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="11" end="10">	
+		<CITY name="昆江岭" id="11"   out_x="217" out_y="1407" ></CITY>
+		<CITY name="黎山" id="12"    out_x="434" out_y="2782" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="11" end="12">	
+		<CITY name="昆江岭" id="11"   out_x="217" out_y="1407" ></CITY>
+		<CITY name="黎山" id="12"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="11" end="13">	
+		<CITY name="昆江岭" id="11"   out_x="3841" out_y="434" ></CITY>
+		<CITY name="酆岭" id="13"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="11" end="14">	
+		<CITY name="昆江岭" id="11"   out_x="2898" out_y="2910" ></CITY>
+		<CITY name="龙须潭" id="14"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="11" end="15">	
+		<CITY name="昆江岭" id="11"   out_x="3841" out_y="434" ></CITY>
+		<CITY name="酆岭" id="13"   out_x="1389" out_y="176" ></CITY>
+		<CITY name="荒沙岛" id="15"   out_x="" out_y="" ></CITY>
+	</BUS>
+		
+		
+		
+<!--酆岭寻路配置文件 -->		
+<!--	<BUS beg="13" end="7">	
+		<CITY name="酆岭" id="13"   out_x="178" out_y="1967" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="217" out_y="1407" ></CITY>
+		<CITY name="黎山" id="12"    out_x="434" out_y="2782" ></CITY>
+		<CITY name="轩辕城" id="10"     out_x="239" out_y="519" ></CITY>
+		<CITY name="殇丘" id="7"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	-->
+	<BUS beg="13" end="3">
+	    <CITY name="酆岭" id="13"   out_x="178" out_y="1967" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="217" out_y="1407" ></CITY>
+		<CITY name="黎山" id="12"    out_x="434" out_y="2782" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="335" out_y="3081" ></CITY>
+		<CITY name="殇丘" id="3"  out_x="" out_y="" ></CITY>
+	</BUS>
+	<BUS beg="13" end="4">	
+		<CITY name="酆岭" id="13"   out_x="178" out_y="1967" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="217" out_y="1407" ></CITY>
+		<CITY name="黎山" id="12"    out_x="434" out_y="2782" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="239" out_y="519" ></CITY>
+		<CITY name="夕原" id="4"   out_x="" out_y="" ></CITY>
+	</BUS>
+	<BUS beg="13" end="8">	
+		<CITY name="酆岭" id="13"   out_x="178" out_y="1967" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="217" out_y="1407" ></CITY>
+		<CITY name="黎山" id="12"   out_x="3938" out_y="902" ></CITY>
+		<CITY name="嵎阙泽" id="8"  out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="13" end="9">	
+		<CITY name="酆岭" id="13"   out_x="178" out_y="1967" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="217" out_y="1407" ></CITY>
+		<CITY name="黎山" id="12"   out_x="3011" out_y="207" ></CITY>
+		<CITY name="桃源乡" id="9"  out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="13" end="10">	
+		<CITY name="酆岭" id="13"   out_x="178" out_y="1967" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="217" out_y="1407" ></CITY>
+		<CITY name="黎山" id="12"    out_x="434" out_y="2782" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="13" end="11">	
+		<CITY name="酆岭" id="13"   out_x="178" out_y="1967" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="13" end="12">	<CITY name="酆岭" id="13"   out_x="178" out_y="1967" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="217" out_y="1407" ></CITY>
+		<CITY name="黎山" id="12"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="13" end="14">	
+		<CITY name="酆岭" id="13"   out_x="4004" out_y="934" ></CITY>
+		<CITY name="龙须潭" id="14"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="13" end="15">	
+		<CITY name="酆岭" id="13"   out_x="1389" out_y="176" ></CITY>
+		<CITY name="荒沙岛" id="15"   out_x="" out_y="" ></CITY>
+	</BUS>
+
+    
+		
+		
+<!--黎山寻路配置文件 -->		
+<!--	<BUS beg="12" end="7">	
+		<CITY name="黎山" id="12"    out_x="434" out_y="2782" ></CITY>
+		<CITY name="轩辕城" id="10"     out_x="239" out_y="519" ></CITY>
+		<CITY name="殇丘" id="7"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	-->
+	<BUS beg="12" end="3">
+	    <CITY name="黎山" id="12"    out_x="434" out_y="2782" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="335" out_y="3081" ></CITY>
+		<CITY name="殇丘" id="3"  out_x="" out_y="" ></CITY>
+	</BUS>
+	<BUS beg="12" end="4">	
+		<CITY name="黎山" id="12"    out_x="434" out_y="2782" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="239" out_y="519" ></CITY>
+		<CITY name="夕原" id="4"   out_x="" out_y="" ></CITY>
+	</BUS>
+	<BUS beg="12" end="8">	
+		<CITY name="黎山" id="12"   out_x="3938" out_y="902" ></CITY>
+		<CITY name="嵎阙泽" id="8"  out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="12" end="9">	
+		<CITY name="黎山" id="12"   out_x="3011" out_y="207" ></CITY>
+		<CITY name="桃源乡" id="9"  out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="12" end="10">	
+		<CITY name="黎山" id="12"    out_x="434" out_y="2782" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="12" end="11">	
+		<CITY name="黎山" id="12"   out_x="2522" out_y="3000" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="12" end="13">	
+		<CITY name="黎山" id="12"   out_x="2522" out_y="3000" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="3841" out_y="434" ></CITY>
+		<CITY name="酆岭" id="13"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="12" end="14">	
+		<CITY name="黎山" id="12"   out_x="2522" out_y="3000" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="2898" out_y="2910" ></CITY>
+		<CITY name="龙须潭" id="14"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="12" end="15">	
+		<CITY name="黎山" id="12"   out_x="2522" out_y="3000" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="3841" out_y="434" ></CITY>
+		<CITY name="酆岭" id="13"   out_x="1389" out_y="176" ></CITY>
+		<CITY name="荒沙岛" id="15"   out_x="" out_y="" ></CITY>
+	</BUS>
+
+		
+		
+		
+<!--龙须潭寻路配置文件 -->		
+<!--	<BUS beg="14" end="7">	
+		<CITY name="龙须潭" id="14"   out_x="88" out_y="2378" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="217" out_y="1407" ></CITY>
+		<CITY name="黎山" id="12"    out_x="434" out_y="2782" ></CITY>
+		<CITY name="轩辕城" id="10"     out_x="239" out_y="519" ></CITY>
+		<CITY name="殇丘" id="7"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	-->
+	<BUS beg="14" end="3">
+	   <CITY name="龙须潭" id="14"   out_x="88" out_y="2378" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="217" out_y="1407" ></CITY>
+		<CITY name="黎山" id="12"    out_x="434" out_y="2782" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="335" out_y="3081" ></CITY>
+		<CITY name="殇丘" id="3"  out_x="" out_y="" ></CITY>
+	</BUS>
+	<BUS beg="14" end="4">	
+		<CITY name="龙须潭" id="14"   out_x="88" out_y="2378" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="217" out_y="1407" ></CITY>
+		<CITY name="黎山" id="12"    out_x="434" out_y="2782" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="239" out_y="519" ></CITY>
+		<CITY name="夕原" id="4"   out_x="" out_y="" ></CITY>
+	</BUS>
+	<BUS beg="14" end="8">	
+		<CITY name="龙须潭" id="14"   out_x="88" out_y="2378" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="217" out_y="1407" ></CITY>
+		<CITY name="黎山" id="12"   out_x="3938" out_y="902" ></CITY>
+		<CITY name="嵎阙泽" id="8"  out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="14" end="9">	
+		<CITY name="龙须潭" id="14"   out_x="88" out_y="2378" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="217" out_y="1407" ></CITY>
+		<CITY name="黎山" id="12"   out_x="3011" out_y="207" ></CITY>
+		<CITY name="桃源乡" id="9"  out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="14" end="10">	
+		<CITY name="龙须潭" id="14"   out_x="88" out_y="2378" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="217" out_y="1407" ></CITY>
+		<CITY name="黎山" id="12"    out_x="434" out_y="2782" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="14" end="11">	
+		<CITY name="龙须潭" id="14"   out_x="88" out_y="2378" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="14" end="12">	
+		<CITY name="龙须潭" id="14"   out_x="88" out_y="2378" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="217" out_y="1407" ></CITY>
+		<CITY name="黎山" id="12"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="14" end="13">	
+		<CITY name="龙须潭" id="14"   out_x="2164" out_y="114" ></CITY>
+		<CITY name="酆岭" id="13"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="14" end="15">	
+		<CITY name="龙须潭" id="14"   out_x="2164" out_y="114" ></CITY>
+		<CITY name="酆岭" id="13"   out_x="1389" out_y="176" ></CITY>
+		<CITY name="荒沙岛" id="15"   out_x="" out_y="" ></CITY>
+	</BUS>
+
+		
+<!--测试地图寻路配置文件 -->		
+	<BUS beg="50" end="7">	
+		<CITY name="测试地图" id="50"   out_x="150" out_y="10" ></CITY>
+		<CITY name="殇丘" id="7"   out_x="" out_y="" ></CITY>
+	</BUS>			
+		
+		
+<!--荒沙岛寻路配置文件 -->		
+<!--	<BUS beg="15" end="7">	
+		<CITY name="荒沙岛" id="15"   out_x="1287" out_y="940" ></CITY>
+		<CITY name="酆岭" id="13"   out_x="178" out_y="1967" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="217" out_y="1407" ></CITY>
+		<CITY name="黎山" id="12"    out_x="434" out_y="2782" ></CITY>
+		<CITY name="轩辕城" id="10"     out_x="239" out_y="519" ></CITY>
+		<CITY name="殇丘" id="7"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	-->
+	<BUS beg="15" end="3">
+	    <CITY name="荒沙岛" id="15"   out_x="1287" out_y="940" ></CITY>
+		<CITY name="酆岭" id="13"   out_x="178" out_y="1967" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="217" out_y="1407" ></CITY>
+		<CITY name="黎山" id="12"    out_x="434" out_y="2782" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="335" out_y="3081" ></CITY>
+		<CITY name="殇丘" id="3"  out_x="" out_y="" ></CITY>
+	</BUS>
+	<BUS beg="15" end="4">	
+		<CITY name="荒沙岛" id="15"   out_x="1287" out_y="940" ></CITY>
+		<CITY name="酆岭" id="13"   out_x="178" out_y="1967" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="217" out_y="1407" ></CITY>
+		<CITY name="黎山" id="12"    out_x="434" out_y="2782" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="239" out_y="519" ></CITY>
+		<CITY name="夕原" id="4"   out_x="" out_y="" ></CITY>
+	</BUS>
+	<BUS beg="15" end="8">	
+		<CITY name="荒沙岛" id="15"   out_x="1287" out_y="940" ></CITY>
+		<CITY name="酆岭" id="13"   out_x="178" out_y="1967" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="217" out_y="1407" ></CITY>
+		<CITY name="黎山" id="12"   out_x="3938" out_y="902" ></CITY>
+	</BUS>	<CITY name="嵎阙泽" id="8"  out_x="" out_y="" ></CITY>
+	<BUS beg="15" end="9">	
+		<CITY name="荒沙岛" id="15"   out_x="1287" out_y="940" ></CITY>
+		<CITY name="酆岭" id="13"   out_x="178" out_y="1967" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="217" out_y="1407" ></CITY>
+		<CITY name="黎山" id="12"   out_x="3011" out_y="207" ></CITY>
+		<CITY name="桃源乡" id="9"  out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="15" end="10">	
+		<CITY name="荒沙岛" id="15"   out_x="1287" out_y="940" ></CITY>
+		<CITY name="酆岭" id="13"   out_x="178" out_y="1967" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="217" out_y="1407" ></CITY>
+		<CITY name="黎山" id="12"    out_x="434" out_y="2782" ></CITY>
+		<CITY name="轩辕城" id="10"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="15" end="11">	
+		<CITY name="荒沙岛" id="15"   out_x="1287" out_y="940" ></CITY>
+		<CITY name="酆岭" id="13"   out_x="178" out_y="1967" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="15" end="12">	
+		<CITY name="荒沙岛" id="15"   out_x="1287" out_y="940" ></CITY>
+		<CITY name="酆岭" id="13"   out_x="178" out_y="1967" ></CITY>
+		<CITY name="昆江岭" id="11"   out_x="217" out_y="1407" ></CITY>
+		<CITY name="黎山" id="12"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="15" end="13">	
+		<CITY name="荒沙岛" id="15"   out_x="1287" out_y="940" ></CITY>
+		<CITY name="酆岭" id="13"   out_x="" out_y="" ></CITY>
+	</BUS>	
+	<BUS beg="15" end="14">	
+		<CITY name="荒沙岛" id="15"   out_x="1287" out_y="940" ></CITY>
+		<CITY name="酆岭" id="13"   out_x="4004" out_y="934" ></CITY>
+		<CITY name="龙须潭" id="14"   out_x="" out_y="" ></CITY>
+	</BUS>
+</BUSES>		

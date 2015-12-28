@@ -1,0 +1,41 @@
+package client_config;
+
+message Path {
+	required string log_file = 1;
+	required string data_path = 2;
+	required string update_pak = 3;
+	required string efficiency_file = 4;
+}
+
+message Report {
+	required string UseName = 1;
+	required string PassWord = 2;
+	required string EmailAddr = 3;
+	required string Reciver = 4;
+	required string SMTP = 5;
+}
+message SocketIO {
+	required uint32 recv_buf_len = 1;		// 接受缓存长度
+	required uint32 send_pool = 2;			// 发送池数量 can be shared
+	required uint32 send_buf_len = 3;		// 发送缓存
+
+	required string packet_begin = 4;		// 包头标记
+	required string packet_end = 5;			// 包尾标记
+	required bool packet_flag = 6;			// 是否包含标记
+
+	required uint32 discard_threshold = 7;	// 悬挂在windows内部和网络模块中的包裹数量达到此数字开始丢弃发送包裹
+	required uint32 pend_limit = 8;			// 推送限制
+}
+message GameProto {
+	required string desc_file = 1;	// 世界描述文件
+	required string data_file = 2;	// 世界数据文件
+}
+message client {
+	optional uint32 clients = 1;		// 最大连接数
+	required string bind_dll = 2;		// 数据绑定动态连接库模块
+	required uint32 beats = 3;			// 逻辑循环的帧数控制
+	required Path path = 4;				// Support 参数
+	required Report report = 5;			// 崩溃报告的地址
+	required SocketIO socket_io = 6;
+	required GameProto proto = 7;
+}

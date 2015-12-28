@@ -1,0 +1,121 @@
+// See README.txt for information and build instructions.
+//	message Item
+//	message Charactor
+	
+import "system.proto";
+package world.Interface;
+
+// 物品基本结构
+message Item {
+	enum MoneyType {
+		GameMoney = 0;					// 游戏币
+		RMB = 1;						// 人民币
+		Score = 2;						// 积分
+		GongDe = 3;						// 功德
+		}
+	enum BindType {
+		Cannot = 0;						// 不能绑定
+		Manual = 1;						// 手工绑定
+		Auto = 2;						// 第一次使用自动绑定
+		}
+	enum ClassType						// 装备品质声明
+	{
+		PuTong = 0;		// 普通
+		JingZhi = 1;	// 精致
+		YouXiu = 2;		// 优秀
+		ChuangQi = 3;	// 传奇
+		ShenHua = 4;	// 神话
+		NiTian1 = 5;	// 逆天1
+		NiTian2 = 6;	// 逆天2
+		NiTian3 = 7;	// 逆天3
+		Random = 8;		// 随机
+	}
+
+	required core.BaseItem base_item = 1;
+	required bool buy_able = 2;			// 是否可以购买
+	required bool sell_able = 3;		// 是否可以出售
+	required bool exchange_able = 4;	// 是否可以交易
+	required bool destroy_able = 5;		// 是否可以被销毁
+	required MoneyType money_type = 6;	// 购买货币类型
+	required int32 buy_price = 7;		// 购买价格
+	required int32 sell_price = 8;		// 出售价格(游戏币)
+	required BindType bind_type = 9;	// 绑定类型	
+	required bool bind_flag = 10;		// 是否已经绑定
+	required ClassType class = 11;		// 装备品质
+	required int32 icon_id = 12;		// 图标/模型编号
+	required int32 time_cur = 13;
+	required int32 time_max = 14;		// 拥有时间
+	
+	repeated core.LimitValue limits = 15;	// 限制
+	repeated core.EffectValue effects = 16;	// 影响	
+}
+
+message Charactor {
+	enum State						// 角色状态
+	{
+		STAND = 0;			// 待机
+		MOVE = 1;			// 移动
+		JUMP = 2;			// 跳跃
+
+		ATTACK = 3;			// 普通攻击
+		SKILL_SIGN = 4;		// 技能吟唱
+		SKILL_CAST = 5;		// 技能攻击
+		PICKUP = 6;			// 拾取
+		HANGUP = 7;			// 开旗
+		EMOTE = 8;			// 表情
+
+		BEHIT = 9;			// 被攻击
+		BEATFLY = 10;		// 击飞
+		UP = 11;			// 起立
+		DIE = 12;			// 死亡
+		SWIMMY = 13;		// 眩晕
+		BERUSH = 14;		// 被冲锋
+
+		CALLRIDE = 15;		// 骑马
+		
+		SLUMBER = 16;		// 沉睡
+		CLOSE_OFF = 17;		// 隔离
+	}
+	required int32	leastdc = 1;	//最小物理攻击力
+	required int32	maxdc = 2;		//最大物理攻击力
+	required int32	ac = 3;			//物理防御力
+	required int32	mac = 4;		//法术防御力
+	required int32	crit = 5;		//物理重击率
+	required int32	skillcrit = 6;	//技能重击率
+	required int32	hitchance = 7;	//命中
+	required int32	hedge = 8;		//躲闪
+	required int32	hpreg = 9;		//生命恢复速度
+	required int32	mpreg = 10;		//法力恢复速度
+	required float	attspeed = 11;	//攻击速度
+	required float	movespeed = 12;	//移动速度
+	required int32	maxhp = 13;		//最大生命值
+	required int32	maxmp = 14;		//最大法力值
+	required int32	HP = 15;		//当前生命值
+	required int32	MP = 16;		//当前法力值
+	required State	state = 17;		//当前状态
+	required bool	silent = 18;	//沉默
+	required bool	Chaotic = 19;	//混乱
+	required float	runspeed = 20;	//跑步速度
+	required int32	level = 21;		//等级
+	required int32	skilleff = 22;	//法术伤害
+	required int32	attdistance = 23;//普通攻击范围
+	required int32	dmgweek = 24;	//伤害减免
+	required int32	dmgreturn = 25;	//伤害反弹
+	required int32	double_rate = 26;//利刃几率
+	required int32	crazy = 27;		//狂战士几率
+	required int32	dizzy = 28;		//击晕几率
+	required int32	EatMp = 29;		//嗜魔几率
+	required int32	EatHp = 30;		//嗜血几率
+	required int32	Mpreturn = 31;	//宁神几率
+	required int32	qx = 32;		//潜行
+	required int32	stand = 33;		//站立半径
+	required int32	camouflage = 34;//伪装
+	required int32	sense = 35;		//侦测
+	required bool	isolation = 36;	//隔绝
+	required bool	immunity = 37;	//免疫
+	required int32	predictmarker = 38;		//预言术标记
+	required int32	manaburnmarker = 39;	//法力灼烧标记
+	required int32	poseID = 40;			//伪装ID
+	required int32	nomove = 41;			//定身
+	required core.MoveAble pos = 42;		// 所在位置+速度
+}

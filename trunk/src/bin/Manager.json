@@ -1,0 +1,83 @@
+
+{
+	"socket_io" : 
+	[
+		{
+			"max_socket" : 8,
+			"recv_buf_len" : 65536,
+			"send_buf_len" : 65536,
+			"send_pool" : 64,
+			"discard_threshold" : 2048,
+			"pend_limit" : 4194304,
+			"packet_begin" : "TEST",
+			"packet_end" : "TEST",
+			"packet_flag" : true
+		},
+		
+		{
+			"max_socket" : 8,
+			"recv_buf_len" : 65536,
+			"send_buf_len" : 65536,
+			"send_pool" : 64,
+			"discard_threshold" : 2048,
+			"pend_limit" : 4194304,
+			"packet_begin" : "TEST",
+			"packet_end" : "TEST",
+			"packet_flag" : true
+		}
+	],
+	
+	"logic" : 
+	{
+		"server_type" : "Manager",
+		"beat" : 16,
+		"listen_IP" : "127.0.0.1:5001",
+		"logic_dll" : "Manager",
+		"manager_IP" : "127.0.0.1:5001",
+		"server_name" : "管理服务器",
+		"manager" : 
+		{
+			"stylers" : 
+			[
+				//Manager
+				{
+					"depends" : [],
+					"unique" : true
+				},
+				//Gate
+				{
+					"depends" : ["Login","Game","Calc","AI"],
+					"unique" : true
+				},
+				//Login
+				{
+					"depends" : [],
+					"unique" : true
+				},
+				//Game
+				{
+					"depends" : [],
+					"unique" : true
+				},
+				//Calc
+				{
+					"depends" : ["Game"],
+					"unique" : true
+				},
+				//AI
+				{
+					"depends" : ["Game","Calc"],
+					"unique" : false
+				}			
+			]
+		}
+		
+	},
+	"path" : 
+	{
+		"data_path" : "data",
+		"efficiency_file" : "manager",
+		"log_file" : "log4manager.properties",
+		"update_pak" : "server_update"
+	}
+}

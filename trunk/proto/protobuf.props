@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup
+    Condition="'$(protobufBeforeTargets)' == '' and '$(protobufAfterTargets)' == '' and '$(ConfigurationType)' != 'Makefile'">
+    <protobufBeforeTargets>Midl</protobufBeforeTargets>
+    <protobufAfterTargets>CustomBuild</protobufAfterTargets>
+  </PropertyGroup>
+  <PropertyGroup>
+    <protobufDependsOn
+      Condition="'$(ConfigurationType)' != 'Makefile'">_SelectedFiles;$(protobufDependsOn)</protobufDependsOn>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <protobuf>
+      <CommandLineTemplate>.\protoc -I. --cpp_out=. [inputs]</CommandLineTemplate>
+      <Outputs>%(Filename).pb.h;%(Filename).pb.cc</Outputs>
+      <ExecutionDescription>Generating %(Filename).pb.{h,cc}...</ExecutionDescription>
+    </protobuf>
+  </ItemDefinitionGroup>
+</Project>

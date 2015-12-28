@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VisualStudioToolFile
+	Name="google protobuf"
+	Version="8.00"
+	>
+	<Rules>
+		<CustomBuildRule
+			Name="protobuf"
+			CommandLine=".\protoc -I. --cpp_out=. [inputs]"
+			Outputs="$(InputName).pb.h;$(InputName).pb.cc"
+			FileExtensions="*.proto"
+			ExecutionDescription="Generating $(InputName).pb.{h,cc}..."
+			>
+			<Properties>
+			</Properties>
+		</CustomBuildRule>
+	</Rules>
+</VisualStudioToolFile>

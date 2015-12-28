@@ -1,0 +1,73 @@
+package server_config;
+
+message Path {
+	required string log_file = 1;
+	required string data_path = 2;
+	required string update_pak = 3;
+	required string efficiency_file = 4;
+}
+
+message SocketIO {
+	required uint32 max_socket = 1;			// 最大连接数
+
+	required uint32 recv_buf_len = 2;		// 接受缓存长度
+	required uint32 send_pool = 3;			// 发送池数量 can be shared
+	required uint32 send_buf_len = 4;		// 发送缓存
+
+	required string packet_begin = 5;		// 包头标记
+	required string packet_end = 6;			// 包尾标记
+	required bool packet_flag = 7;			// 是否包含标记
+
+	required uint32 discard_threshold = 8;	// 悬挂在windows内部和网络模块中的包裹数量达到此数字开始丢弃发送包裹
+	required uint32 pend_limit = 9;			// 推送限制
+}
+
+message Logic {
+	message ManagerLogic {
+		message Styler {
+			required bool unique = 1;			// 是否唯一
+			repeated Logic.type depends = 2;	// 关心的依赖类型列表
+		}
+		repeated Styler stylers = 1;
+	}
+	message GameLogic {
+		required int32 map_split_size = 1;
+		required int32 map_vis_zone = 2;
+		required bool no_mob = 3;
+		required bool no_role = 4;
+		required int32 newbie_line = 5; 
+		required bool allow_debug_break = 6;	
+	}
+	message DbLogic {
+		required uint32 MinConn  = 1;
+		required uint32 MaxConn	 = 2;
+	}
+	message GameProto {
+		required string desc_file = 1;	// 世界描述文件
+		required string data_file = 2;	// 世界数据文件
+	}
+	enum type {
+		Manager = 0; 	//区域管理
+		Gate = 1;		//网关
+		Login = 2;		//登陆注册选人
+		Game = 3;		//游戏
+		Calc = 4;		//计算
+		AI = 5;	
+	}
+	required string logic_dll = 1;	// 逻辑动态连接库模块
+	required string server_name = 2;// 服务器名
+	required string manager_IP = 3;	// 管理服务器地址
+	required type server_type = 4;	// 提供的类型
+	required int32 beat = 5;		// 心跳速率
+	required string listen_IP = 6;	// 监听地址
+	optional ManagerLogic manager = 7;
+	optional GameLogic game = 8;
+	optional DbLogic db = 9;
+	optional GameProto proto = 10;
+}
+
+message Server {
+	repeated SocketIO socket_io = 1;
+	required Path path = 2;
+	required Logic logic = 3;
+}

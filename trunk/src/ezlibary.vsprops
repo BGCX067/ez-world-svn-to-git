@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="gb2312"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="ezlibary"
+	OutputDirectory="..\..\..\_build\src\$(ProjectName).$(ConfigurationName)"
+	IntermediateDirectory="..\..\..\_build\src\$(ProjectName).$(ConfigurationName)"
+	>
+</VisualStudioPropertySheet>

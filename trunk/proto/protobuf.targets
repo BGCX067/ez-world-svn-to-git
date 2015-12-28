@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <PropertyPageSchema
+      Include="$(MSBuildThisFileDirectory)$(MSBuildThisFileName).xml" />
+    <AvailableItemName
+      Include="protobuf">
+      <Targets>_protobuf</Targets>
+    </AvailableItemName>
+  </ItemGroup>
+  <UsingTask
+    TaskName="protobuf"
+    TaskFactory="XamlTaskFactory"
+    AssemblyName="Microsoft.Build.Tasks.v4.0">
+    <Task>$(MSBuildThisFileDirectory)$(MSBuildThisFileName).xml</Task>
+  </UsingTask>
+  <Target
+    Name="_protobuf"
+    BeforeTargets="$(protobufBeforeTargets)"
+    AfterTargets="$(protobufAfterTargets)"
+    Condition="'@(protobuf)' != ''"
+    DependsOnTargets="$(protobufDependsOn);ComputeprotobufOutput"
+    Outputs="%(protobuf.Outputs)"
+    Inputs="%(protobuf.Identity);%(protobuf.AdditionalDependencies);$(MSBuildProjectFile)">
+    <ItemGroup
+      Condition="'@(SelectedFiles)' != ''">
+      <protobuf
+        Remove="@(protobuf)"
+        Condition="'%(Identity)' != '@(SelectedFiles)'" />
+    </ItemGroup>
+    <ItemGroup>
+      <protobuf_tlog
+        Include="%(protobuf.Outputs)"
+        Condition="'%(protobuf.Outputs)' != '' and '%(protobuf.ExcludedFromBuild)' != 'true'">
+        <Source>@(protobuf, '|')</Source>
+      </protobuf_tlog>
+    </ItemGroup>
+    <Message
+      Importance="High"
+      Text="%(protobuf.ExecutionDescription)" />
+    <WriteLinesToFile
+      Condition="'@(protobuf_tlog)' != '' and '%(protobuf_tlog.ExcludedFromBuild)' != 'true'"
+      File="$(IntDir)$(ProjectName).write.1.tlog"
+      Lines="^%(protobuf_tlog.Source);@(protobuf_tlog-&gt;'%(Fullpath)')" />
+    <protobuf
+      Condition="'@(protobuf)' != '' and '%(protobuf.ExcludedFromBuild)' != 'true'"
+      CommandLineTemplate="%(protobuf.CommandLineTemplate)"
+      AdditionalOptions="%(protobuf.AdditionalOptions)"
+      Inputs="%(protobuf.Identity)" />
+  </Target>
+  <PropertyGroup>
+    <ComputeLinkInputsTargets>
+            $(ComputeLinkInputsTargets);
+            ComputeprotobufOutput;
+          </ComputeLinkInputsTargets>
+    <ComputeLibInputsTargets>
+            $(ComputeLibInputsTargets);
+            ComputeprotobufOutput;
+          </ComputeLibInputsTargets>
+  </PropertyGroup>
+  <Target
+    Name="ComputeprotobufOutput"
+    Condition="'@(protobuf)' != ''">
+    <ItemGroup>
+      <protobufDirsToMake
+        Condition="'@(protobuf)' != '' and '%(protobuf.ExcludedFromBuild)' != 'true'"
+        Include="%(protobuf.Outputs)" />
+      <Link
+        Include="%(protobufDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+      <Lib
+        Include="%(protobufDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+      <ImpLib
+        Include="%(protobufDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+    </ItemGroup>
+    <MakeDir
+      Directories="@(protobufDirsToMake-&gt;'%(RootDir)%(Directory)')" />
+  </Target>
+</Project>

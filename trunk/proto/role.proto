@@ -1,0 +1,39 @@
+import "system.proto";
+package world.role;
+
+message GivenItem
+{
+	required core.Base template = 1;	//物品模板
+	required int32	overlap = 2;		//叠加数量
+	required int32	position = 3;		//放置位置
+}
+
+message Creator
+{
+	// 出生位置
+	required float x = 1;			
+	required float y = 2; 
+	required float z = 3;
+	required int32 map = 4;
+	
+	// 五项基本数值
+	required int32	str = 5;		//力量
+	required int32	agi = 6;		//敏捷
+	required int32	phy = 7;		//灵力
+	required int32	con = 8;		//体质
+	required int32	int = 9;		//智慧
+
+	// 物品空间
+	required int32	bag_num = 10;		//背包栏数
+	required int32	depot_num = 11;		//仓库栏数
+	
+	// 新手物品
+	repeated GivenItem items = 12;	
+}
+
+message Tables
+{
+	required Creator creator = 1;		// 创建角色参数
+	repeated int32 levelup_exp = 2;		// 升级所需经验值
+	repeated int32 levelup_gongde = 3;	// 升级后师傅提供的功德值
+}

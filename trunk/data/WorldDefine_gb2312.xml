@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="gb2312"?>
+<defines>
+	<string type = "enum" name = "UnitType">
+		<item string = "单元"/>
+		<item string = "基类"/>
+	</string>
+	<string type = "enum" name = "UnitDim">
+		<item string = "无"/>
+		<item string = "一维"/>
+		<item string = "二维"/>
+		<item string = "三维"/>
+	</string>
+	<string type = "enum" name = "FieldType">
+		<item string = "字符串"/>
+		<item string = "枚举"/>
+		<item string = "整数"/>
+		<item string = "布尔"/>
+		<item string = "百分比"/>
+		<item string = "浮点数"/>
+		<item string = "ID映射"/>
+		<item string = "集合"/>
+	</string>
+	<string type = "enum" name = "FieldFlag">
+		<item string = "需要模板"/>
+		<item string = "实例字段"/>
+		<item string = "需要保存"/>
+	</string>
+	<string type = "enum" name = "LimitOp">
+		<item string = "大于等于"/>
+		<item string = "大于"/>
+		<item string = "等于"/>
+		<item string = "小于等于"/>
+		<item string = "小于"/>
+		<item string = "不等于"/>
+		<item string = "无标记"/>
+		<item string = "有标记"/>
+	</string>
+	<string type = "enum" name = "LimitDest">
+		<item string = "使用者"/>
+		<item string = "作用目标"/>
+	</string>
+	<string type = "enum" name = "LimitDestType">
+		<item string = "基本属性"/>
+		<item string = "自定义"/>
+	</string>
+	<string type = "enum" name = "LimitValueType">
+		<item string = "常数数值"/>
+		<item string = "上限百分比"/>
+	</string>
+	<string type = "enum" name = "EffectPhase">
+		<item string = "裸值"/>
+		<item string = "阶段值"/>
+		<item string = "当前值"/>
+	</string>
+	<string type = "enum" name = "DestUnit">
+		<item string = "使用者"/>
+		<item string = "作用目标"/>
+	</string>
+	<string type = "enum" name = "EffectType">
+		<item string = "及时生效"/>
+		<item string = "持续生效"/>
+		<item string = "周期生效"/>
+	</string>
+	<string type = "enum" name = "SpaceType">
+		<item string = "无"/>
+		<item string = "矩形"/>
+		<item string = "扇形"/>
+		<item string = "前冲矩形"/>
+	</string>
+	<string type = "enum" name = "BuffAddType">
+		<item string = "无法释放"/>
+		<item string = "可叠加"/>
+		<item string = "延续"/>
+		<item string = "替换"/>
+		<item string = "排队"/>
+		<item string = "抵消"/>
+		<item string = "抑制"/>
+		<item string = "推后"/>
+	</string>
+	<string type = "enum" name = "TimeRule">
+		<item string = "无限制"/>
+		<item string = "更早时间"/>
+		<item string = "更晚时间"/>
+	</string>
+	<string type = "enum" name = "LeverRule">
+		<item string = "级别无关"/>
+		<item string = "同级"/>
+		<item string = "更高级"/>
+		<item string = "更低级"/>
+	</string>
+	<string type = "enum" name = "SourceLever">
+		<item string = "无限制"/>
+		<item string = "同一释放者"/>
+	</string>
+	<string type = "enum" name = "EffectValueType">
+		<item string = "常数"/>
+		<item string = "脚本"/>
+		<item string = "状态机"/>
+	</string>
+	<string type = "enum" name = "EVParam">
+		<item string = "NULL"/>
+		<item string = "使用者实体"/>
+		<item string = "作用目标实体"/>
+	</string>
+	<string type = "enum" name = "RelationType">
+		<item string = "物品附加"/>
+		<item string = "临时BUF"/>
+		<item string = "即时生效"/>
+	</string>
+	<string type = "FieldId" name = "EffectOp">
+		 <item string = "世界定义/操作管理"/>
+	</string>
+	<string type = "FieldId" name = "Unit">
+		 <item string = "世界定义/单元管理"/>	
+	</string>
+	<string type = "FieldId" name = "Calc">	
+		 <item string = "世界定义/计算方式"/>
+	</string>
+	<string type = "table" name="UnitManager">
+		<item string = "ID"/>
+		<item string = "单元名"/>
+		<item string = "英文别名"/>
+		<item string = "类别"/>
+		<item string = "父单元"/>
+		<item string = "位置类型"/>
+		<item string = "使用角度"/>
+		<item string = "空间类型"/>
+		<item string = "数据模板"/>
+		<item string = "限制模板"/>
+		<item string = "影响模板"/>
+		<item string = "BUFF模板"/>
+		<item string = "状态机"/>
+	</string>
+	<string type = "table" name="UnitAttribDefine">
+		<item string = "字段名"/>
+		<item string = "英文别名"/>
+		<item string = "需要模板"/>
+		<item string = "实例字段"/>
+		<item string = "需要保存"/>
+		<item string = "类型"/>
+		<item string = "最小值"/>
+		<item string = "最大值"/>
+		<item string = "长度"/>
+		<item string = "索引键"/>
+		<item string = "上限字段"/>
+		<item string = "是否衍生字段"/>
+		<item string = "关联属性"/>
+	</string>
+	<string type = "table" name="UnitFsm">
+		<item string = "ID"/>
+		<item string = "状态名"/>
+		<item string = "临时状态"/>
+		<item string = "剩余时间"/>
+		<item string = "###"/>
+	</string>
+	<string type = "table" name="UnitLimite">
+		<item string = "模板名称"/>
+		<item string = "关系类型"/>
+		<item string = "限制目标"/>
+		<item string = "目标类型"/>
+		<item string = "目标属性"/>
+		<item string = "限制操作"/>
+		<item string = "限制值"/>
+		<item string = "组索引"/>
+		<item string = "组说明"/>
+		<item string = "目标属性参照"/>
+		<item string = "数值类型"/>
+	</string>
+	<string type = "table" name="UnitEffect">
+		<item string = "模板名称"/>
+		<item string = "关系类型"/>
+		<item string = "目标元素"/>
+		<item string = "目标单元"/>
+		<item string = "目标属性"/>
+		<item string = "影响操作"/>
+		<item string = "影响值"/>
+		<item string = "行为参数"/>
+		<item string = "影响阶段"/>
+		<item string = "目标属性参照"/>
+	</string>
+	<string type = "table" name="BuffEffect">
+		<item string = "模板名称"/>
+		<item string = "关系类型"/>
+		<item string = "目标元素"/>
+		<item string = "目标单元"/>
+		<item string = "目标属性"/>
+		<item string = "影响操作"/>
+		<item string = "影响值类型"/>
+		<item string = "影响值"/>
+		<item string = "影响值参数1"/>
+		<item string = "影响值参数2"/>
+		<item string = "影响值参数3"/>
+		<item string = "影响值参数4"/>
+		<item string = "行为参数"/>
+		<item string = "影响阶段"/>
+		<item string = "释放者实例"/>
+		<item string = "自身类型"/>
+		<item string = "等级"/>
+		<item string = "作用类型"/>
+		<item string = "持续时间"/>
+		<item string = "周期间隔"/>
+		<item string = "延迟时间"/>
+		<item string = "触发条件"/>
+		<item string = "空间类型"/>
+		<item string = "空间参数1"/>
+		<item string = "空间参数2"/>
+		<item string = "是否跟随移动"/>
+		<item string = "是否使用递减"/>
+		<item string = "叠加方式"/>
+		<item string = "时间规则"/>
+		<item string = "级别规则"/>
+		<item string = "数量规则"/>
+		<item string = "来源规则"/>
+		<item string = "组索引"/>
+		<item string = "组说明"/>
+		<item string = "目标属性参照"/>
+		<item string = "能否重击"/>
+		<item string = "对敌有效"/>
+		<item string = "能否幸运一击"/>
+		<item string = "图标"/>
+		<item string = "BUFF说明"/>
+	</string>
+	<string type = "table" name="UnitRelationDefine">
+		<item string = "ID"/>
+		<item string = "关系名"/>
+		<item string = "作用目标"/>
+		<item string = "作用者"/>
+		<item string = "使用者"/>
+		<item string = "关系类型"/>
+	</string>
+	<string type = "table" name="BehaviorDefine">
+		<item string = "ID"/>
+		<item string = "行为名"/>
+		<item string = "英文别名"/>
+		<item string = "源单元"/>
+		<item string = "目标单元"/>
+	</string>
+	<string type = "table" name="OperateDefine">
+		<item string = "ID"/>
+		<item string = "操作名"/>
+		<item string = "英文别名"/>
+	</string>
+	<string type = "table" name="ContactManager">
+		<item string = "ID"/>
+		<item string = "联系名"/>
+		<item string = "英文别名"/>
+	</string>
+	<string type = "table" name="ContactDefine">
+		<item string = "字段名"/>
+		<item string = "英文别名"/>
+		<item string = "类型"/>
+		<item string = "最小值"/>
+		<item string = "最大值"/>
+		<item string = "长度"/>
+		<item string = "索引键"/>
+	</string>
+	<string type = "tree" name="tree">
+		<item string = "世界定义"/>
+		<item string = "单元管理"/>
+		<item string = "关系定义"/>
+		<item string = "行为管理"/>
+		<item string = "操作管理"/>
+		<item string = "联系管理"/>
+		<item string = "单元数据"/>
+		<item string = "单元"/>
+		<item string = "数据属性"/>
+		<item string = "数据模板"/>
+		<item string = "限制模板"/>
+		<item string = "影响模板"/>
+		<item string = "BUFF模板"/>
+		<item string = "状态机"/>
+		<item string = "单元联系"/>
+		<item string = "联系"/>
+		<item string = "联系定义"/>
+		<item string = "联系数据"/>
+		<item string = "数据计算"/>
+		<item string = "操作定义"/>
+		<item string = "实例管理器"/>
+		<item string = "实例"/>
+	</string>
+</defines>

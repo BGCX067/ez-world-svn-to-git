@@ -1,0 +1,330 @@
+//	message Item
+//	message Equip
+//	message Prop
+//	message Gem
+//	message JingLian
+//	message Talisman
+
+// 物品模板与物品实例的关系
+import "system.proto";
+import "world_interface.proto";
+package world.template;
+
+// 物品基本结构
+message Item {
+	required int32 id = 1; 				// 模板ID
+	required string name = 2; 			// 名字
+	required bool buy_able = 3;			// 是否可以购买
+	required bool sell_able = 4;		// 是否可以出售
+	required bool exchange_able = 5;	// 是否可以交易
+	required bool destroy_able = 6;		// 是否可以被销毁
+	required Interface.Item.MoneyType money_type = 7;	// 购买货币类型
+	required Interface.Item.BindType bind_type = 8;		// 绑定类型	
+	required Interface.Item.ClassType class = 9;		// 装备品质
+	required int32 icon_id = 10;		// 图标/模型编号
+	required int32 time_max = 11;		// 拥有时间
+}
+
+message Price
+{
+	required int32 buy_price = 1;		// 购买价格
+	required int32 sell_price = 2;		// 出售价格(游戏币)
+}
+
+message EquipLevel
+{
+	required int32 max_durabilit = 1;	// 最大耐久度
+	required int32 soulup = 2;			//升级魂
+	required int32 stilettoprice = 3;	//打孔价格
+	required int32 upchance = 4;		//升级成功率
+	required int32 socketchan = 5;		//打孔成功率
+}
+
+message Equip
+{
+	enum BodyPart 					// 装备部位声明	
+	{
+        toukui = 0;		// 头盔
+        hujian = 1;		// 护肩
+        pifeng = 2;		// 披风
+        yifu = 3;		// 衣服
+        yaodai = 4;		// 腰带
+        hutui = 5;		// 护腿
+        shoutao = 6;	// 手套
+        huwan = 7;		// 护腕
+        xiezi = 8;		// 鞋子
+        wuqi = 9;		// 武器
+        xianglian = 10;	// 项链
+        jiezhi = 11;	// 戒指
+        shizhuang = 12;	// 时装
+	}
+
+	required Item item_info = 1;		// 基本物品信息
+
+	required BodyPart body = 2;			// 装备部位
+	required int32 set_id = 3;			// 套装编号
+	repeated EquipLevel levels = 4;		// 不同级别参数
+
+	required int32 equiplv = 5;			//物品等级
+	required float xzcsone = 6;			//修正参数1
+	required float xzcstwo = 7;			//修正参数2
+	required bool sfbxyfjsjxs = 8;		//是否不需要附加随机属性
+
+	
+	repeated core.LimitValue limits = 13;	// 限制
+	repeated core.EffectValue effects = 14;	// 影响	
+}
+
+// 道具
+message Prop {
+	enum Type {
+		type0 = 0;	//药品
+		type1 = 1;	//矿石
+		type2 = 2;	//锻造图纸
+		type3 = 3;	//材料
+		type4 = 4;	//任务物品
+		type5 = 5;	//幸运符咒
+		type6 = 6;	//经验卷轴
+		type7 = 7;	//回城卷轴
+		type8 = 8;	//坐骑
+		type9 = 9;	//杂货
+		type10 = 10;	//精炼卷轴
+		type11 = 11;	//矿场守卫卷轴
+		type12 = 12;	//矿场增产符
+		type13 = 13;	//复活卷轴
+		type14 = 14;	//背包扩展符
+		type15 = 15;	//仓库扩展符
+		type16 = 16;	//寻宝符咒
+		type17 = 17;	//打孔符咒
+		type18 = 18;	//礼包
+		type19 = 19;	//替身娃娃
+		type20 = 20;	//千里传音
+		type21 = 21;	//烟花
+		type22 = 22;	//表情喇叭
+		type23 = 23;	//忘情水
+		type24 = 24;	//精炼石
+		type25 = 25;	//矿场侦测卷轴
+		type26 = 26;	//器灵
+		type27 = 27;	//器灵残魂
+		type28 = 28;	//器灵符
+		type29 = 29;	//保底符
+		type30 = 30;	//法宝炼化符
+		type31 = 31;	//任务刷新符
+		type32 = 32;	//绑定符
+		type33 = 33;	//副本进入卷轴
+		type34 = 34;	//习性果实
+		type35 = 35;	//宠物道具
+		type36 = 36;	//宠物果实礼包
+		type37 = 37;	//爱心储蓄罐		
+	}
+	
+	required Item item_info = 1;		// 基本物品信息
+	required Price price = 2;
+	required Type type = 3;				// 道具类型
+	required int32 group = 4;			// 组标记
+	required int32 cooldown = 5;		// 需要冷却时间
+	
+	required bool useable = 6;			//可使用物品
+	required bool onlyeffects = 7;		//唯一物品
+	required bool nodisappear = 8;		//不消失
+	required bool act = 9;				//是否触发动作
+	required int32 overlap_max = 10;	// 最大叠加数
+
+	
+	repeated core.LimitValue limits = 11;	// 限制
+	repeated core.EffectValue effects = 12;	// 影响
+}
+
+// 宝石
+message Gem {
+	required Item item_info = 1;				// 基本物品信息
+	required Price price = 2;
+	required int32 glow_level = 3;				// 辉光档次
+	repeated core.EffectValue effects = 4;		// 影响
+}
+
+// 法宝词缀
+message TalismaFix {
+	required int32 id = 1; 					// 模板ID
+	required int32 name = 2; 				// 名字
+	repeated core.EffectValue effects = 3;	// 影响
+}
+// 法宝模板
+message Talisma {
+	required Item item_info = 1;			// 基本物品信息
+	repeated core.EffectValue effects = 2;	// 影响
+}	
+	
+	
+// 精炼(精炼不是物品;是角色拥有的对物品改造的能力).
+message JingLian {
+	enum Part {
+		Weapon = 0;	//武器
+		Up = 1;		//上半身
+		Down = 2;	//下半身
+		ShiPin = 3;	//饰品(戒指，项链)
+	};
+	required core.Base base_info = 1;	// 基本信息
+	
+	required int32	butian = 2;		//补天需求
+	required int32	jinggang = 3;	//玉石需求
+	required int32	jin = 4;		//金需求
+	required int32	yin = 5;		//银需求
+	required int32	tong = 6;		//铜需求
+	required int32	tie = 7;		//铁需求
+	required Part 	part = 8;		//部位
+	required int32	level = 9;		//等级参考
+	required int32	huiguangyanse = 10;	//辉光颜色	
+	
+	repeated core.EffectValue effects = 31;	// 影响
+}
+
+
+// 地图
+message Map {
+	// 属性域 地图类型 枚举值定义
+	enum Type {
+		Type_0 = 0;	//普通
+		Type_1 = 1;	//副本
+		Type_2 = 2;	//新手分线
+		Type_3 = 3;	//未开放
+	};
+	// 数据模板结构
+	required core.Base	base_info = 1;	//基本信息
+	required int32 width = 2;	//小地图宽
+	required int32 height = 3;	//小地图高
+	required int32 cell = 4;	//小地图cell
+	required Type type = 5;		//地图类型
+}
+// 矿场
+message Mine {
+	required int32 id = 1; 			// 模板ID
+	required int32 name = 2; 		// 名字
+	required int32 map_id = 3;		//地图ID
+	required int32 area_id = 4;		//区域编号
+	required int32 chanpin = 5;		//产品
+	required core.Rect rect = 6;	//区域矩形
+	required core.Point flag = 7;	//旗帜坐标
+	required int32 level = 8;		//级别
+	required int32 nextid = 9;		//下一级ID
+	required int32 max_npcs = 10;	//看守NPC数量上限
+	required int32 golds_lvup = 11;	//升级金钱
+}
+
+message NPC {
+	enum Class {
+		Class_0 = 0;	//普通-标准
+		Class_1 = 1;	//普通-强壮
+		Class_2 = 2;	//普通-施法者
+		Class_3 = 3;	//普通-敏锐
+		Class_4 = 4;	//普通-弓手
+		Class_5 = 5;	//精英-标准
+		Class_6 = 6;	//精英-强壮
+		Class_7 = 7;	//精英-施法者
+		Class_8 = 8;	//精英-敏锐
+		Class_9 = 9;	//精英-弓手
+		Class_10 = 10;	//BOSS
+		Class_11 = 11;	//BOSS-2
+		Class_12 = 12;	//BOSS-3
+		Class_13 = 13;	//BOSS-4
+		Class_14 = 14;	//BOSS-5
+		Class_15 = 15;	//BOSS-6
+		Class_16 = 16;	//BOSS-7
+		Class_17 = 17;	//BOSS-8
+		Class_18 = 18;	//宠物
+		Class_19 = 19;	//普通-观赏
+	}
+	// 属性域 NPC种类 枚举值定义
+	enum Type {
+		Type_0 = 1;		//怪物
+		Type_1 = 2;		//NPC
+		Type_2 = 3;		//机关
+		Type_3 = 4;		//卫兵
+	}
+	// 属性域 职业 枚举值定义
+	enum Job {
+		Job_0 = 0;	//仓库
+		Job_1 = 1;	//传送
+		Job_2 = 2;	//打孔镶嵌
+		Job_3 = 3;	//法宝炼化
+		Job_4 = 4;	//防具出售
+		Job_5 = 5;	//公会
+		Job_6 = 6;	//婚姻
+		Job_7 = 7;	//矿场
+		Job_8 = 8;	//拍卖
+		Job_9 = 9;	//器灵
+		Job_10 = 10;//日常任务
+		Job_11 = 11;//首饰出售
+		Job_12 = 12;//武器出售
+		Job_13 = 13;//药品出售
+		Job_14 = 14;//装备强化
+		Job_15 = 15;//无职业
+		Job_16 = 16;//坐骑
+		Job_17 = 17;//特殊武器出售
+		Job_18 = 18;//特殊防具出售
+		Job_19 = 19;//宝石商
+	};
+	// 属性域 第二名称 枚举值定义
+	enum Name2nd {
+		Name2nd_0 = 0;	//<仓库>
+		Name2nd_1 = 1;	//<传送>
+		Name2nd_2 = 2;	//<打孔镶嵌>
+		Name2nd_3 = 3;	//<法宝炼化>
+		Name2nd_4 = 4;	//<防具出售>
+		Name2nd_5 = 5;	//<公会>
+		Name2nd_6 = 6;	//<婚姻>
+		Name2nd_7 = 7;	//<矿场>
+		Name2nd_8 = 8;	//<拍卖>
+		Name2nd_9 = 9;	//<器灵>
+		Name2nd_10 = 10;	//<日常任务>
+		Name2nd_11 = 11;	//<首饰出售>
+		Name2nd_12 = 12;	//<武器出售>
+		Name2nd_13 = 13;	//<药品出售>
+		Name2nd_14 = 14;	//<升级/锻造>
+		Name2nd_15 = 15;	//无
+		Name2nd_16 = 16;	//<特殊武器出售>
+		Name2nd_17 = 17;	//<特殊防具出售>
+		Name2nd_18 = 18;	//<宝石商>
+		Name2nd_19 = 19;	//<稀有BOSS>
+		Name2nd_20 = 20;	//<任务BOSS>
+		Name2nd_21 = 21;	//<副本头目>
+		Name2nd_22 = 22;	//<矿场守卫>
+		Name2nd_23 = 23;	//<坐骑>
+		Name2nd_24 = 24;	//<装备绑定>
+		Name2nd_25 = 25;	//<高级特殊武器出售>
+		Name2nd_26 = 26;	//<高级特殊防具出售>
+		Name2nd_27 = 27;	//<高级武器出售>
+		Name2nd_28 = 28;	//<高级防具出售>
+	};	
+	required core.Base	base_info = 1;	//基本信息
+	required Class class = 2;			//NPC品质
+	required Type type = 3;				//NPC种类
+	required Job job = 4;				//职业
+	required int32 mod = 5;				//模型使用
+	required int32 tietuid = 6;			//贴图ID
+	required Name2nd name2nd = 7;		//第二名称
+	required int32 ai = 8;				//AI编号
+	required bool nobeatfly = 9;		//击飞免疫
+	required bool moneydrop = 10;		//钱掉落
+	required bool nomdrop = 11;			//普通物品掉落
+	required bool spdrop = 12;			//特殊物品掉落
+	required bool roundable = 13;		//是否旋转
+	required bool nobeatxuanyun = 14;	//眩晕免疫
+	required bool nobeatslow = 15;		//减速免疫
+	required bool nobeatsleep = 16;		//沉睡免疫
+	required bool nobeatchenmo = 17;	//沉默免疫
+	required bool nobeatchongfeng = 18;	//冲锋免疫
+	required int32 attdistance = 19;	//普通攻击范围
+	required int32 attkind = 20;		//攻击种类
+	required int32 birthexcursion = 21;	//出生偏移
+	required int32 patrolarea = 22;		//巡逻范围
+	required int32 bodybetime = 23;		//尸体存在时间
+	repeated int32 jinengid = 24;		//技能ID
+}
+
+message Templates
+{
+	// 装备
+	repeated Equip equips = 1;				// 装备模板
+	repeated Prop props = 2;				// 道具模板
+}

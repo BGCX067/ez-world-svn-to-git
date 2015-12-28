@@ -1,0 +1,2 @@
+import "system.proto";
+package world.db;

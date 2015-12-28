@@ -1,0 +1,207 @@
+import "system.proto";
+package world;
+
+// Gate
+message VersionRequest
+{
+	required uint32 major = 1;		// 主版本号
+	required uint32 version = 2;	// 辅助版本号
+	required uint32 patch = 3;		// 补丁号
+	required uint32	resource = 4;	// 资源版本号
+}
+message MD5Request
+{
+	required string MD5 = 1;
+}
+message SpeederRequest
+{
+	required uint32 delay = 1;
+}
+service GateService
+{
+	rpc VersionValid(VersionRequest) returns (core.Respon);	// 版本校验
+	rpc MD5Valid(MD5Request) returns (core.Respon);			// MD5校验
+	rpc SpeederCheck(SpeederRequest) returns (core.Respon);	// 变速器校验
+	rpc ClientPong(core.NullRequst) returns (core.Respon);	// 客户端对Ping的回应
+}
+
+// 登录
+message LoginRequest
+{
+	required string account = 1;
+	required string password = 2;
+}
+service LoginService {
+	rpc Login (LoginRequest) returns (core.Respon);
+}
+// 角色
+message RoleCreateRequest
+{
+	required string name = 1;			// 昵称
+	required int32 profession = 2;		// 职业
+	required int32 sex = 3;				// 性别
+	required int32 facial_form = 4;		// 脸型
+	required int32 facial_texture = 5;	// 脸贴图
+	required int32 hair = 6;			// 发型
+}
+message RoleSelectRequest
+{
+	required int32 index = 1;
+}
+service RoleService {
+	rpc List (core.NullRequst) returns (core.Respon);				// 角色列表
+	rpc Create (RoleCreateRequest) returns (core.Respon);	// 创建角色
+	rpc Delete (RoleSelectRequest) returns (core.Respon);	// 删除角色
+	rpc EnterGame (RoleSelectRequest) returns (core.Respon);	// 进入游戏
+}
+//游戏
+//角色控制
+message MoveStylerRequest
+{
+	required int32 styler = 1;		// todo:移动方式写在World_data中，这里引入
+}
+message MoveDirectRequest
+{
+	required float d = 1;			// 面向方向角
+	required int32 flags = 2;		// 键盘综合标记
+}
+message SkillTargetRequest
+{
+	required int32 skill_id = 1;
+	required int32 target = 2;
+}
+message SkillPostionRequest
+{
+	required int32 skill_id = 1;
+	required core.PointF point = 2;
+}
+
+service PlayerActionService {
+	rpc MoveStyler (MoveStylerRequest) returns (core.Respon);		// 切换行走方式
+	rpc MoveTo (core.PointF) returns (core.Respon);					// 鼠标行走
+	rpc Stop (core.PointF) returns (core.Respon);					// 停止移动
+	rpc MoveDirect (MoveDirectRequest) returns (core.Respon);		// 键盘行走
+	rpc Jump (MoveDirectRequest) returns (core.Respon);				// 跳跃
+	rpc CastSkillToTarget (SkillTargetRequest) returns (core.Respon);	// 施放技能
+	rpc CastSkillToPosition(SkillPostionRequest) returns (core.Respon);	// 施放技能
+}
+//物品使用
+message MoveItemRequest
+{
+	required int32 src = 1;
+	required int32 dst = 2;
+}
+message ItemRequest
+{
+	required int32 pos = 1;
+}
+service ItemService {
+	rpc MoveItem (MoveItemRequest) returns (core.Respon);
+	rpc DestroyItem (ItemRequest) returns (core.Respon);
+	rpc UseAsProp (ItemRequest) returns (core.Respon);
+	rpc UseAsEquip (MoveItemRequest) returns (core.Respon);
+}
+//Gm
+message PlayerAttribRequest
+{
+	required string name = 1;			// 操作目标名称
+	required int32 attrib_index = 2;	// 属性索引
+	required int32 value = 3;			// 属性值
+}
+message MakeItemRequest
+{
+	required string name = 1;		// 操作目标名称
+	required int32 unit = 2;		// 单元ID
+	required int32 template = 3;	// 模板ID
+	required int32 level = 4;		// 级别
+	required int32 class = 5;		// 品质(0:传奇|1:优秀|2:精致|3:普通)
+	required int32 count = 6;		// 数量
+}
+service GameMasterService {
+	rpc SetPlayerAttrib (PlayerAttribRequest) returns (core.Respon);
+	rpc MakeItem (MakeItemRequest) returns (core.Respon);
+}
+
+message OtherCharactor
+{
+	required int32 id = 1;			// 角色的唯一ID
+	required int32 type = 2;		// 角色类型
+	
+	required core.PointF pos = 3;	// 位置
+	required float d = 4;			// 方向
+	required int32 state = 5;		// 主状态
+	required int32 move_state = 6;	// 移动状态
+	required int32 action = 7;		// 技能或者表情动作ID
+	required float speed = 8;		// 移动速度
+	required int32 level = 9;		// 级别
+
+	optional int32 target_id = 10;	// 攻击目标
+	optional core.PointF target_pos = 11;	// 位置目标
+	
+	required int32 max_hp = 12;
+	required int32 max_mp = 13;
+	required int32 hp = 14;
+	required int32 mp = 15;
+}
+
+message OtherPlayer
+{
+	message Avatar
+	{
+		required string name = 1;			// 昵称
+		required int32 profession = 2;		// 职业
+		required int32 sex = 3;				// 性别
+		required int32 facial_form = 4;		// 脸型
+		required int32 facial_texture = 5;	// 脸贴图
+		required int32 hair = 6;			// 发型
+	}
+	message Equip
+	{
+		required int32 model = 1;		// 模型
+		required int32 level = 2;		// 级别
+		required int32 glow = 3;		// 辉光级别
+		required int32 color = 4;		// 辉光颜色
+	}
+	
+	required OtherCharactor charactor = 1;
+	required Avatar avatar = 2;
+	repeated Equip equips = 3;
+	
+	// Pk 信息
+	required int32 pk_mode = 4;			// Pk Mode+2
+	required bool red_name = 5;			// 是否红名[Pk 值，只看是否为0,0代表非红名.]
+
+	// 是否潜行/伪装
+	required int32 visible = 6;			// 可见状态
+	required int32 shape = 7;			// 变化成的形状
+
+	// 称号信息
+	required int32 title = 8;
+	required string consortia = 9;
+
+	// 骑乘信息
+	required int32 model = 10;		// 模型
+	required int32 level = 11;		// 级别
+
+	// 时装模式
+	required bool  dress_mode = 12;	// 是否时装模式	
+}
+
+// NPC外观
+message NPC
+{
+	required OtherCharactor charactor = 1;
+	required int32 class = 2;	// NPC模板
+	required int32 model = 3;	// NPC模型 不能从模板中取得吗？
+	required int32 styler = 4;	// NPC类型 不能从模板中取得吗？
+	required bool rotation = 5;	// 是否旋转 不能从模板中取得吗？
+}
+// 召唤兽外观
+message Callee
+{
+	required int32 controller_id = 1;		// 主人ID
+	required string controller_name = 2;	// 主人名
+	required string controller_level = 3;	// 主人级别(判别是否在新手保护阶段)
+	required int32 pk_mode = 4;				// Pk Mode+2
+	required bool red_name = 5;				// 是否红名[Pk 值，只看是否为0,0代表非红名.]
+}

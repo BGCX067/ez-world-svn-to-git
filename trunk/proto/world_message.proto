@@ -1,0 +1,27 @@
+option cc_generic_services = true;
+
+message UserService {
+	message User
+	{
+		
+	}
+	message Login {
+		message Request {   
+			required string username = 1;   
+			required string password = 2; 
+		}  
+		enum Result {
+			Sucess = 0;		
+			UserNoExist = 1;
+			PasswordErr = 2;
+		}
+		required Request request = 1;
+		required Result	result = 2;
+	}
+	message CharactorList
+	{
+		
+	}
+	required Login login = 1;
+ }
+ 

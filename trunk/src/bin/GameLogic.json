@@ -1,0 +1,46 @@
+
+{
+	"socket_io" : 
+	[
+		{
+			"max_socket" : 8,
+			"nRecvBufLen" : 65536,
+			"nSendBufLen" : 65536,
+			"nSendPool" : 64,
+			"nDiscardThreshold" : 2048,
+			"nPendLimit" : 4194304,
+			"packet_begin" : "TEST",
+			"packet_end" : "TEST",
+			"packet_flag" : true
+		},
+		
+		{
+			"max_socket" : 8,
+			"nRecvBufLen" : 65536,
+			"nSendBufLen" : 65536,
+			"nSendPool" : 64,
+			"nDiscardThreshold" : 2048,
+			"nPendLimit" : 4194304,
+			"packet_begin" : "TEST",
+			"packet_end" : "TEST",
+			"packet_flag" : true
+		}
+	]	
+	
+	"logic" : 
+	{
+		"Server_type" : "Game",
+		"beat" : 16,
+		"listen_IP" : "127.0.0.1:5032",
+		"logic_dll" : "GameLogic",
+		"manager_IP" : "127.0.0.1:5001",
+		"server_name" : "游戏服务器"
+	},
+	"path" : 
+	{
+		"data_path" : "data",
+		"efficiency_file" : "game",
+		"log_file" : "log4game.properties",
+		"update_pak" : "server_update"
+	}
+}

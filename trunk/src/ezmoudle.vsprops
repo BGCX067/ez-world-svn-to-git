@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="gb2312"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="ezmoudle"
+	OutputDirectory="..\..\bin\$(ConfigurationName)"
+	IntermediateDirectory="..\..\..\_build\src\$(ProjectName).$(ConfigurationName)"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		AdditionalIncludeDirectories=""
+	/>
+	<Tool
+		Name="VCLinkerTool"
+		OutputFile="$(OutDir)\$(ProjectName).dll"
+		ImportLibrary="..\..\..\_build\src\$(ProjectName).$(ConfigurationName)\$(ProjectName).lib"
+	/>
+</VisualStudioPropertySheet>

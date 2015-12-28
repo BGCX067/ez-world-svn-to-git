@@ -1,0 +1,11 @@
+import "world_template.proto";
+import "equip.proto";
+import "role.proto";
+package world;
+
+message Root
+{
+	required world.template.Templates templates = 1;
+	required world.equip.Tables equip_tables = 2;
+	required world.role.Tables role_tables = 3;
+}

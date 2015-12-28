@@ -1,0 +1,152 @@
+// See README.txt for information and build instructions.
+// 	message GUID
+//	message Base
+//	message BaseItem
+//	message Template
+//	message ItemTemplate
+//	message Position
+//	message MoveAble
+//	message Rect
+//	message Point
+//	message LimitValue
+//	message EffectValue
+//	message Container
+
+package core;
+
+message GUID {
+	required fixed64 lo = 1;
+	required fixed64 hi = 2;
+}
+
+message Base {
+	required int32 type = 1;		// 单元ID	
+	required int32 template = 2; 	// 模板ID
+}
+
+message BaseItem {
+	required Base base = 1;
+	required string name = 2; 		// 名字
+	required int32 overlap_cur = 3;
+	required int32 overlap_max = 4;
+}
+
+message Position {
+	required float x = 1;			
+	required float y = 2; 
+	required float z = 3;
+	required float d = 4;
+	required int32 map = 5;		// 所在地图ID
+	required int32 copy = 6;	// 所在副本实例ID
+}
+
+message MoveAble {
+	required Position pos = 1;
+	required float speed = 2;
+}
+
+message Rect {
+	required int32 x = 1;
+	required int32 y = 2;
+	required int32 w = 3;
+	required int32 h = 4;
+}
+
+message Point {
+	required int32 x = 1;
+	required int32 y = 2;
+}
+message PointF {
+	required float x = 1;
+	required float y = 2;
+}
+
+message LimitValue {
+	enum Op {
+		GreaterEqual = 0;	// 大于等于
+		Greater = 1;		// 大于
+		Equal = 2;			// 等于
+		Lessqual = 3;		// 小于等于
+		Less = 4;			// 小于
+		NotEqual = 5;		// 不等于
+	}
+	enum ValueType {
+		Constant = 0;
+		Precent = 1;
+	}
+	required string field_name = 1;		// 限制的属性域
+	required Op op = 2;
+	required ValueType value_type = 3;
+	repeated int32 value = 4;
+}
+
+message Limits {
+	required string relation = 1;			// 关系名
+	repeated LimitValue handle_limits = 2;	// 对使用者的属性限制
+	repeated LimitValue target_limits = 3;	// 对目标的属性限制
+	required int32 stand = 4;				// 使用者和目标之间的立场关系(自己，敌对，中立)
+}
+
+message EffectValue {
+	enum Op {
+		Add = 0;			//数值迭加
+		PersentAdd = 1;		//百分比迭加
+		FieldPersentAdd = 2;//以上限字段为基础的百分比迭加
+		Replace = 3;		//替换
+		Prefix = 4;			//字符串前缀
+		Postfix = 5;		//字符串后缀
+		AddFlag = 6;		//增加标记
+		DelFlag = 7;		//删除标记
+	}
+	enum Type
+	{
+		Constant = 0;
+		Script = 1;
+		State = 2;
+	}
+
+	message ScriptParam
+	{
+		repeated float p = 1;
+	}
+	message ScriptFunc
+	{
+		required string function = 1;
+		repeated ScriptParam params = 2;
+	}
+
+	required string field_name = 1;		// 影响的属性域
+	required Op op = 2;	
+	required Type type = 3;
+	optional ScriptFunc script = 4;
+	repeated float value = 5;		// 脚本和常数2选1
+}
+
+message Effects {
+	message Selector {
+		enum Type
+		{
+			Stand = 0;		// 立场
+			Space = 1;		// 空间
+			Attrib = 2;		// 属性
+		}
+		required Type type = 1;		// 类型
+		repeated float params = 2;	// 参数
+	}
+	required string relation = 1;			// 关系名
+	repeated EffectValue effectors = 2;		// 产生的影响
+	repeated Selector selectors = 3;		// 条件过滤器
+}
+
+message Container
+{
+	repeated GUID reference = 1;
+}
+
+message Respon
+{
+	required int32 result = 1;
+}
+message NullRequst
+{
+}

@@ -1,0 +1,71 @@
+
+{
+	"logic" : 
+	{
+		"beat" : 0,
+		"db" : 
+		{
+			"MaxConn" : 0,
+			"MinConn" : 0
+		},
+		"game" : 
+		{
+			"allow_debug_break" : false,
+			"map_split_size" : 0,
+			"map_vis_zone" : 0,
+			"newbie_line" : 0,
+			"no_mob" : false,
+			"no_role" : false
+		},
+		"listen_IP" : "",
+		"logic_dll" : "",
+		"manager" : 
+		{
+			"stylers" : 
+			[
+				
+				{
+					"depends" : [],
+					"unique" : false
+				}
+			]
+		},
+		"manager_IP" : "",
+		"server_name" : "",
+		"server_type" : "Manager"
+	},
+	"path" : 
+	{
+		"data_path" : "",
+		"efficiency_file" : "",
+		"log_file" : "",
+		"update_pak" : ""
+	},
+	"socket_io" : 
+	[
+		
+		{
+			"discard_threshold" : 0,
+			"max_socket" : 0,
+			"packet_begin" : "",
+			"packet_end" : "",
+			"packet_flag" : false,
+			"pend_limit" : 0,
+			"recv_buf_len" : 0,
+			"send_buf_len" : 0,
+			"send_pool" : 0
+		},
+		
+		{
+			"discard_threshold" : 0,
+			"max_socket" : 0,
+			"packet_begin" : "",
+			"packet_end" : "",
+			"packet_flag" : false,
+			"pend_limit" : 0,
+			"recv_buf_len" : 0,
+			"send_buf_len" : 0,
+			"send_pool" : 0
+		}
+	]
+}

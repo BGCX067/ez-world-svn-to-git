@@ -1,0 +1,318 @@
+// See README.txt for information and build instructions.
+//	message Equip
+//	message Prop
+//	message Gem
+//	message Talisman
+	
+//	message Buff
+//	message User
+//	message Player
+//	message Mail
+//	message Question
+//	message RandomQuestion
+//	message Vengeance
+//	message Trade
+//	message Team
+//	message Requestion
+//	message Role
+//	message NPC
+
+//	message Map
+//	message Mine
+
+//	message SkillInstance
+//	message Consortia
+//		message MineStone
+//		message Member
+	
+import "system.proto";
+import "world_interface.proto";
+import "world_template.proto";
+package world.data;
+
+// 装备
+message Equip {
+	required int32 template = 1;					// 装备模板
+	required Interface.Item.ClassType class = 2;	// 装备品质
+	required int32 buy_price = 3;					// 购买价格
+	required int32 sell_price = 4;					// 出售价格(游戏币)
+	required int32 durabilit = 5;					// 当前耐久度
+	required int32 sockets = 6;						// 宝石孔数量
+	repeated int32 gems = 7;						// 已经镶嵌的宝石(宝石模板ID)
+	required int32 time = 8;						// 拥有时间
+	required bool bind_flag = 9;					// 是否已经绑定
+	repeated core.EffectValue effects = 10;			// 影响
+}
+// 道具
+message Prop {
+	required int32 template = 1;				// 基本物品信息
+	required int32 time = 2;					// 拥有时间
+	required bool bind_flag = 3;				// 是否已经绑定
+	required int32 overlap_cur = 4;
+	required int32 cur_cooldown = 5;			// 当前冷却时间
+}
+// 宝石
+message Gem {
+	required int32 template = 1;				// 基本物品信息
+	required int32 overlap_cur = 2;
+}
+// 法宝
+message Talisman {
+	required int32 template = 1;				// 基本物品信息
+	required int32 prefix1 = 2;					//法宝前缀1
+	required int32 prefix2 = 3;					//法宝前缀2
+	required Interface.Item.ClassType class = 4;// 品质
+	required int32 buy_price = 5;				// 购买价格
+	required int32 sell_price = 6;				// 出售价格(游戏币)
+	required int32 level = 7;					//炼化次数
+	required int32 cooldown = 8;				//法宝冷却时间
+	required bool bind_flag = 9;				// 是否已经绑定
+	repeated core.EffectValue effects = 10;		// 影响
+}
+
+message User {
+	// 属性域 防沉迷状态 枚举值定义
+	enum Wallow {
+		wallowstate_0 = 0;	//健康游戏时间
+		wallowstate_1 = 1;	//疲劳游戏时间
+		wallowstate_2 = 2;	//非健康游戏时间
+	};
+	
+	required int32	RMB = 1;		//元宝
+	required Wallow wallow = 2;		//防沉迷状态
+	required int32	gm_level = 3;	//GM级别
+	required bool	gm_invisible = 4;	//GM隐身
+	required bool	gm_unbreakable = 5;	//GM无敌
+}
+
+message Player {
+	// 属性域 职业 枚举值定义
+	enum Job {
+		job_0 = 0;	//武将
+		job_1 = 1;	//刺客
+		job_2 = 2;	//术士
+		job_3 = 3;	//乐师
+	}
+	// 属性域 PK模式 枚举值定义
+	enum PKmode {
+		PKmode_0 = 0;	//普通
+		PKmode_1 = 1;	//PK
+		PKmode_2 = 2;	//强杀
+	}
+	
+	// 性别
+	enum Sex {
+		Sex_male = 0;
+		Sex_Female = 1;
+	}
+
+	required string nickname = 1;	//昵称
+	
+	required int32	str = 2;		//力量
+	required int32	agi = 3;		//敏捷
+	required int32	phy = 4;		//灵力
+	required int32	con = 5;		//体质
+	required int32	int = 6;		//智慧
+	
+	required Interface.Charactor charactor = 7;	//通用角色属性
+	
+	required Job job = 8;				//职业
+	required Sex sex = 9;				//性别
+	required int32 exp = 10;			//经验
+	required int32 unusepoint = 11;		//未分配点数
+	required int32 nuplevelexp = 12;	//升级所需经验
+	required int32 exp_factor = 13;		//经验倍率
+	required int32 title = 14;			//称号
+	
+	required int32	bag_num = 15;		//背包栏数
+	required int32	depot_num = 16;		//仓库栏数
+	required int32	pk = 17;			//PK值
+	required PKmode pk_mode = 18;		//PK模式
+
+	required int32	soul = 19;			//魂
+	required int32	magicfind = 20;		//寻宝率
+	required int32	slient = 21;		//禁言
+	required int32	gongde = 22;		//功德
+	required int32	aixinzhi = 23;		//爱心值	
+}
+
+message Buff{
+     required int32 RelationID = 1;
+     required int32 SkillID = 2;
+     required int32 BufferIndex = 3;
+     required int32 Factor = 4;
+     required int32 BufferValue = 5;
+     required int32 RemainTime = 6;
+}
+
+message Mail{
+     required string Title = 1;
+     required string Sender = 2;
+     required string Content = 3;
+     required int32 Money = 4;
+     required int32 Yuanbao = 5;
+     required uint64 SendTime = 6;
+     required int32 ReadFlag = 7;
+     required int32 SendFlag = 8;
+     repeated core.GUID attachment = 9;
+}
+
+message Question{
+	required int32 id = 1;
+	repeated int32 counts = 2;	// 四个计数器
+	required int32 timer = 3;	// 计时器
+}
+message RandomQuestion{
+	required int32 used = 1;		// 已经做掉多少个
+	required int32 Score = 2;		// 当前积分是多少
+	required int32 Level = 3;		// 刷新时的玩家级别
+	repeated int32 lists = 4;		// 十个随机任务
+	required Question question = 5;	// 当前任务信息
+}
+message Vengeance
+{
+	required uint32 start = 1;			//计时器开始时间
+	required core.GUID player = 2;			//仇人ID
+}
+message Trade
+{
+	// 交易状态机
+	enum State {
+		state_0 = 0;	//放东西
+		state_1 = 1;	//锁定
+		state_2 = 2;	//确认
+	}
+	required core.GUID target = 1;			// 交易目标
+	required State state = 2;			// 自己的交易状态
+	repeated core.GUID items = 3;			// 自己的物品实例 (如何传过去给对方的机制)
+	required int32 money = 4;			// 自己的游戏币
+	required int32 yuanbao = 5;			// 自己的元宝
+}
+message Team
+{
+	required core.Container players = 1;// 队员列表
+	required core.GUID leader = 2;			// 队长
+}
+message Requestion
+{
+	enum Type {
+		Team = 0;	//邀请组队
+		Teacher = 1;	//拜师请求
+		Student = 2;	//收徒请求
+		brother = 3;	//结拜请求
+		Trade = 4;	//交易请求
+		Guild = 5;	//公会请求
+	}
+	required core.GUID target = 1;
+	required Type type = 2;
+}
+message Role{
+	required Player player = 1;				// 玩家属性
+	repeated int32 skills = 2;				// 技能列表
+	repeated int32 titles = 3;				// 称号
+	repeated int32 jinglian = 4;			// 精炼
+	repeated int32 tutors = 5;				// 新手指引
+	repeated core.Base shortcuts = 6;		// 快捷方式
+	required int32 bag_money = 7;			// 背包金币
+	required int32 depot_money = 8;			// 仓库金币
+	repeated Buff buffs = 9;				// buffs
+	repeated Mail mails = 10;				// 邮件
+	// 任务系统
+	repeated int32 question_flags = 11;		// 全局任务标记
+	repeated Question questions = 12;		// 当前进行任务
+	repeated RandomQuestion question_random = 13;	// 随机任务
+	// 社会关系列表	
+	required core.Container shields = 14;	// 屏蔽列表
+	required core.Container friends = 15;	// 好友列表
+	required core.Container brothers = 16;	// 结拜列表
+	required core.Container teachers = 17;	// 师父列表
+	required core.Container students = 18;	// 徒弟列表
+	repeated Vengeance vengeances = 19;		// 复仇列表
+	required core.GUID guild = 20;	// 公会信息
+	// 玩家交易
+	required Trade trade = 21;
+	// 背包/仓库/装备
+	repeated core.Container items = 22;	// 物品容器	
+	// 队伍
+	required core.GUID team = 23;	// 所在队伍
+	// 各类邀请事务状态	
+}
+
+message NPC {
+	required int32 template = 1;		// 模板
+	required Interface.Charactor charactor = 2;	//通用角色属性
+	required int32 offerexp = 3;		//提供经验值
+	required int32 zoom = 4;			//视野
+	required int32 follow = 5;			//追击范围
+}
+// 地图
+message Map {
+	required int32 template = 1;		//模板
+}
+
+// 矿场
+message Mine {
+	required int32 template = 1;		//模板
+	required int32 chanliang = 2;		//产量
+	required core.GUID guild_id = 3;	//所属公会
+	required core.Container npcs = 4;	//当前看守NPC
+	required int32 CountDown = 5;		//产出倒计时
+}
+
+// 技能实例
+message SkillInstance{
+	// 飞行->单次释放
+	// 飞行->周期释放(地图上效果残留)
+	// 飞行->潜伏->单次释放
+	// 飞行->潜伏->周期释放(地图上效果残留)
+	enum State
+	{
+		START = 0;			// 开始
+		SINGING = 1;		// 吟唱
+		CASTING = 2;		// 释放
+		FLYING = 3;			// 飞行
+		LATENT = 4;			// 在地图上潜伏
+		RESULT = 5;			// 释放BUFF(可能只释放一次 也可能周期重复释放)
+	};
+	required int32 skill_id = 1;	// 技能模板id
+	required core.GUID caster = 2;	// 施放角色
+	required core.GUID target = 3;	// 施放目标
+	required core.Position pos = 4;	// 施放目标位置
+	required uint32 last_time = 5;	// 当前状态或者重复开始的时间
+	required uint32 result_times = 6;	// 周期释放的当前次数
+}
+
+// 不在线的成员信息机制
+// 在线成员的汇报机制
+// 汇率调整记录和矿石交易记录（分页查看的任何记录，都需要在玩家角色本身上做记录。）
+// 公会
+message Consortia{
+	// 公会矿石仓库
+	message MineStone{
+		required int32 id = 1;
+		required int32 cnt = 2;
+		required int32 max = 3;
+		required int32 rate = 4;
+	}
+	// 公会成员
+	message Member{
+		enum Duty
+		{
+			Leader = 0;				// 会长
+			Second = 1;				// 副会长
+			Manager = 2;			// 管理层
+			Major = 3;				// 精英
+			Normal = 4;				// 普通会员
+		};
+		required core.GUID player = 1;		// 玩家引用
+		required Duty duty = 2;				// 职务
+		required int32  offer = 3;			// 贡献铜币的数量
+	}
+	required string name = 1;		// 公会名称
+	required int32 level = 2;		// 公会级别
+	required int32 funds = 3;		// 公会当前资金
+	required int32 consume = 4;		// 公会消费数量
+	required string bulletin = 5;	// 公会公告
+	repeated Member members = 6;	// 公会成员
+	repeated MineStone depot = 7;	// 公会矿石仓库
+}

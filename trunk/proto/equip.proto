@@ -1,0 +1,95 @@
+package world.equip;
+
+message EquipMake
+{
+	message Adder
+	{
+		required int32	jiazhi = 1;	//加值
+		required float	wumian = 2;	//物免
+		required float	momian = 3;	//魔免
+		required float	pingjunshangmian = 4;	//平均伤免
+		required string desc = 5;	// 注释
+	}
+	message PinZhi
+	{
+		repeated Adder adder = 1;			//加值
+	}
+
+	repeated PinZhi pinzhi = 1;	//品质
+}
+
+message BuWeiXiShu
+{
+	required int32	buweixishu = 1;	//部位系数
+	required float	pricexishu = 2;	//价格系数
+}
+	
+message SjsxBiao	
+{
+	//职业
+	enum class_Enum {
+		class_0 = 0;	//
+		class_1 = 1;	//
+		class_2 = 2;	//
+		class_3 = 3;	//
+	};
+	required int32 id = 1;	//ID
+	required class_Enum	class = 2;	//职业
+	required int32 equiplv = 3;	//物品等级下限
+	required int32 addvalue = 4;	//加值
+	required int32 strmin = 5;	//力量下限
+	required int32 strmax = 6;	//力量上限
+	required int32 dexmin = 7;	//敏捷下限
+	required int32 dexmax = 8;	//敏捷上限
+	required int32 conmin = 9;	//体质下限
+	required int32 conmax = 10;	//体质上限
+	required int32 powermin = 11;	//灵力下限
+	required int32 powermax = 12;	//灵力上限
+	required int32 intmin = 13;	//智慧下限
+	required int32 intmax = 14;	//智慧上限
+	required int32 minattmin = 15;	//最小物攻下限
+	required int32 minattmax = 16;	//最小物攻上限
+	required int32 maxattmin = 17;	//最大物攻下限
+	required int32 maxattmax = 18;	//最大物攻上限
+	required int32 defmin = 19;	//物防下限
+	required int32 defmax = 20;	//物防上限
+	required int32 mdefmin = 21;	//法防下限
+	required int32 mdefmax = 22;	//法防上限
+	required int32 mattmin = 23;	//法伤下限
+	required int32 mattmax = 24;	//法伤上限
+	required int32 hpmin = 25;	//最大生命值下限
+	required int32 homax = 26;	//最大生命值上限
+	required int32 mpmin = 27;	//最大法力值下限
+	required int32 mpmax = 28;	//最大法力值上限
+	required int32 hitmin = 29;	//命中下限
+	required int32 hitmax = 30;	//命中上限
+	required int32 dodgemin = 31;	//闪躲下限
+	required int32 dodgemax = 32;	//闪躲上限
+	required int32 phycrmin = 33;	//物爆下限
+	required int32 phycrmax = 34;	//物爆上限
+	required int32 skicrmin = 35;	//技爆下限
+	required int32 skicrmax = 36;	//技爆上限
+	required int32 hpremin = 37;	//生命恢复速度下限
+	required int32 hpremax = 38;	//生命恢复速度上限
+	required int32 mpremin = 39;	//法力恢复速度下限
+	required int32 moremax = 40;	//法力恢复速度上限
+	required int32 rpmin = 41;	//掉宝下限
+	required int32 rpmax = 42;	//掉宝上限
+}
+
+message GdsxBiao
+{
+	message Job
+	{
+		repeated int32 shuxingID = 1;	//属性ID
+	}
+	repeated Job jobs = 1;				//职业节点
+}
+
+message Tables
+{
+	repeated EquipMake equip_makes = 1;		// 装备生成表
+	repeated BuWeiXiShu equip_buwei = 2;	// 部位系数表
+	repeated SjsxBiao equip_sjsx = 3; 		// 随机属性对照表
+	repeated GdsxBiao equip_gdxs = 4;		// 固定属性对照表
+}
